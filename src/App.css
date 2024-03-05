@@ -1,0 +1,21 @@
+
+/* html{
+    scroll-behavior: smooth;
+} */
+
+.active-link{
+    background-color: #475569;
+    outline: 1px solid #E2E8F0;
+}
+
+.dark .active-link{
+    background-color: #E2E8F0;
+    outline: 1px solid #0F172A;
+}
+
+section {
+    height: 1000px;
+}
+
+
+
