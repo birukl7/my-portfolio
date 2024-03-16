@@ -1,7 +1,7 @@
 
-/* html{
+html{
     scroll-behavior: smooth;
-} */
+}
 
 .active-link{
     background-color: #475569;
@@ -13,9 +13,48 @@
     outline: 1px solid #0F172A;
 }
 
-section {
-    height: 1000px;
+#landing-pic-container{
+    width: 370px;
+    height: 333px;
+    overflow: hidden;
+    clip-path: circle(45%);
+  
 }
+
+
+#landig-pic-container img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scroll-css{
+    transition: transform 1s ease-out;
+    animation: scroll-it 3s infinite;
+   
+}
+
+.about-pic-css{
+    width: 370px;
+    height: 333px;
+    overflow: hidden;
+    clip-path: circle(45%);
+}
+
+@keyframes scroll-it {
+    0%{
+        transform: translateY(-3px);
+    }50%{
+        transform: translateY(12px);
+    } 100%{
+        transform: translateY(-3px);
+    }
+}
+
+
+
+
+
 
 
 

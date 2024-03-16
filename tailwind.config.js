@@ -7,6 +7,15 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {},
+    screens:{
+      'sm': '640px',
+      'md': '768px',
+      'mg': '1024px',
+      'xl': '1280px',
+    },
+    fontFamily:{
+      Truculenta:['"Truculenta"', ]
+    },
   },
   plugins: [],
 }
