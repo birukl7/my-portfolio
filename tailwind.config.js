@@ -16,6 +16,17 @@ export default {
     fontFamily:{
       Truculenta:['"Truculenta"', ]
     },
+    backgroundSize:{
+      'auto': 'auto',
+      'cover': 'cover',
+      'contain': 'contain',
+      '98%': '98%',
+      '100%': '100%',
+      '105%': '105%'
+    },
+    // height:{
+    //   'custom':'72px',
+    // },
   },
   plugins: [],
 }

@@ -21,6 +21,19 @@ html{
   
 }
 
+#client-img-container{
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    clip-path: circle(47%);
+}
+
+#client-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 #landig-pic-container img{
     width:100%;
