@@ -28,8 +28,9 @@ function App() {
          <RecentWorks/>
          <Clients/>
          <Contact/>
-         <Footer/>
+        
       </main>
+      <Footer/>
     </>
   )
 }
