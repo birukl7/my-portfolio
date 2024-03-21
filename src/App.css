@@ -54,6 +54,40 @@ html{
     clip-path: circle(45%);
 }
 
+body{
+    background: rgb(2,0,36);
+  background: linear-gradient(124deg, rgba(2,0,36,1) 67%, rgba(1,87,126,1) 100%, rgba(1,94,133,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+.dark body{
+    background: initial;
+}
+
+.css-text{
+    position: relative;
+}
+
+.css-text::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(2, 0, 36);
+    border-left: 2px solid white;
+    animation: animate 4s steps(18) infinite;
+}
+
+@keyframes animate {
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+
 @keyframes scroll-it {
     0%{
         transform: translateY(-3px);

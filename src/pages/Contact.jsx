@@ -5,30 +5,30 @@ import PrimaryButton from '../components/PrimaryButton'
 
 function Contact() {
   return (
-    <section id='contact mt-16'>
+    <section id='contact' className='mt-20'>
       <SectionTitle text={'Get In Touch'}/>
-      <div className='flex justify-between gap-x-4'>
-        <div>
+      <div className='flex md:flex-row flex-col justify-between gap-x-4'>
+        <div className='w-full'>
           <p>Let's Talk about everything!</p>
           <p>Don't like forms? send me an <span className='text-red-500'>email</span>✨</p>
         </div>
 
-        <div className='w-7/12'>
-          <div className='flex  flex-col sm:flex-row'>
-            <Input placeholder={'Your name'} class={'w-full mr-5'}/>
+        <div className='md:w-full md:mt-0 mt-6'>
+          <div className='flex  flex-col sm:flex-row px-3 '>
+            <Input placeholder={'Your name'} class={'w-full mr-5 md:mb-0 mb-3'}/>
             <Input placeholder={'Your email'} class={'w-full'}/>
           </div>
           <div className='flex flex-col gap-y-3 mt-3'>
-            <Input className={'w-full'} placeholder={'Subject'}/>
+            <div className='px-3 w-full'>
+              <Input class={'w-full'} placeholder={'Subject'}/>
+            </div>
+            
             <textarea name="" id="" cols="30" rows="10" className='p-5 m-4 mt-0 rounded-md focus:outline-1 focus:outline-blue-400 text-black font-semibold' placeholder='Message '></textarea>
             <PrimaryButton text={'send message'}/>
           </div>
 
         </div>
           
-        <div>
-
-        </div>
       </div>
     </section>
   )

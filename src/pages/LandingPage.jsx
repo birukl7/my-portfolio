@@ -3,8 +3,24 @@ import  { useEffect, useState } from 'react'
 import myPicture from '/images/body-images/my-picture.svg' // The picture in the landing page
 import { faGithub, faLinkedinIn, faTelegram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
+/**
+ * 
+ * Shapes
+ */
+import polygon1 from '/images/home-images/Polygon 1.svg'
+import polygon2 from '/images/home-images/Polygon 2.svg'
+import polygon3 from '/images/home-images/Vector 5.svg'
+import polygon4 from '/images/home-images/Vector 6.svg'
+import polygon5 from '/images/home-images/Vector 7.svg'
+import polygon6 from '/images/home-images/Vector 8.svg'
+import polygon7 from '/images/home-images/Vector 9.svg'
+import polygon8 from '/images/home-images/Vector 10.svg'
+import polygon9 from '/images/home-images/Vector 11.svg'
+import polygon10 from '/images/home-images/Vector 12.svg'
+
 function LandingPage() {
   const [screenH, setScreenH] =useState(window.innerHeight)
+  const [text, setText]= useState('')
   useEffect(()=>{
     const handleResize= ()=>{
       setScreenH(window.innerHeight)
@@ -14,6 +30,27 @@ function LandingPage() {
       window.removeEventListener('resize', handleResize);
     }
   }, [])
+
+    const textload=()=>{
+      setTimeout(()=>{
+        setText('UI/UX designer.')
+      }, 0);
+      setTimeout(()=>{
+        setText('enthusiast learner.')
+      }, 4000);
+      setTimeout(()=>{
+        setText('web developer.')
+      }, 8000);
+    }
+
+    textload()
+    setInterval(textload, 12000);
+    useEffect(()=>{
+      const textChange = document.querySelector('.js-text');
+      textChange.textContent = text; 
+    },[text])
+
+
   return (
     <section className="mb-5 relative"  id='home'>
       {/* A div element to center a container */}
@@ -24,7 +61,7 @@ function LandingPage() {
           </div>
           <div className='mt-3'>
             <h1 className='text-center sm:text-7xl text-6xl font-Truculenta font-extrabold '>Biruk Lemma</h1>
-            <p className='text-center my-4 text-xl font-Truculenta'> I'm a UI/UX designer.</p>
+            <p className='text-center my-4 text-xl font-Truculenta block mx-auto'> I'm a <span className='js-text css-text'></span></p>
           </div>
           <ul className='flex justify-around sm:my-5 my-4'>
           
@@ -46,8 +83,17 @@ function LandingPage() {
             <p className='mt-2 text-sm font-extralight'>Scroll Down</p>
           </div>  
         ) : null}
-     
-      </div>     
+      </div>   
+        <img src={polygon1} alt="" className=' -z-20 absolute w-10 sm:top-80  sm:left-60 top-40 left-12 rotate-12 transition-all  duration-1000 ease-in-out' />
+        <img src={polygon2} alt="" className=' -z-20 absolute w-10  sm:right-36 sm:bottom-10 top-16 right-20 rotate-6 transition-all  duration-1000 ease-in-out' />
+        <img src={polygon3} alt="" className=' -z-20 absolute w-10 sm:top-32 top-32 transition-all  duration-1000 ease-in-out' />
+        <img src={polygon4} alt="" className=' -z-20 absolute w-10 sm:bottom-20 top-56 right-0 transition-all  duration-1000 ease-in-out' />
+        <img src={polygon5} alt="" className=' -z-20 absolute w-10 sm:top-60 sm:right-3/4 bottom-32 transition-all  duration-1000 ease-in-out' />
+        <img src={polygon6} alt="" className=' -z-20 absolute w-10 sm:top-32 sm:right-80 bottom-80 right-0  -rotate-45 transition-all  duration-1000 ease-in-out' />
+        <img src={polygon7} alt="" className=' -z-20 absolute w-10  sm:right-3/4 sm:bottom-80  left-0 bottom-80 transition-all  duration-1000 ease-in-out' />
+        <img src={polygon8} alt="" className=' -z-20 absolute w-10 sm:bottom-80 sm:right-0 hidden sm:inline-block transition-all  duration-1000 ease-in-out' />
+        <img src={polygon9} alt="" className=' -z-20 absolute w-10 sm:top-1/2 sm:right-80 hidden sm:inline-block transition-all  duration-1000 ease-in-out' />
+        <img src={polygon10} alt="" className=' -z-20 absolute w-10 sm:bottom-32 sm:right-72 hidden sm:inline-block  transition-all  duration-1000 ease-in-out' />
     </section>
   )
 }

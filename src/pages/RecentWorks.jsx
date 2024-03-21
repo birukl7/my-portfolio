@@ -22,7 +22,7 @@ function RecentWorks() {
           <li><SecondaryBtn text={'Database'}/></li>
           <li><SecondaryBtn text={'Mobile App'}/></li>
         </ul>
-        <div className='grid sm:grid-cols-3 mt-2 p-3 gap-x-5 gap-y-5'>
+        <div className='grid sm:grid-cols-1 md:grid-cols-3 mt-2 p-3 gap-x-5 gap-y-5'>
           <div className=' rounded-lg overflow-hidden outline outline-1'>
             <div className='h-60 w-full  bg-no-repeat  bg-center  hover bg-100% hover:bg-105% transition-all duration-150 ease-in-out' style={{backgroundImage: `url(${benKolde})`}}></div>
             <span className='flex justify-between py-4 px-4'> <h4 className='text-3xl font-semibold font-Truculenta text'>Link Builders</h4><span className='flex items-center gap-x-4 '><a href="#" className='underline hover:text-blue-400'>Visit Site</a><a href="#" className='text-2xl'><FontAwesomeIcon icon={faGithub} className='hover:text-yellow-300 dark:hover:text-blue-400 transition-all duration-150 ease-in-out'/></a></span></span>

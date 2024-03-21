@@ -6,16 +6,21 @@ export default {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        'blue-black' : '#020024'
+      },
+      fontFamily:{
+        Truculenta:['"Truculenta"', ]
+      },
+    },
     screens:{
       'sm': '640px',
       'md': '768px',
       'mg': '1024px',
       'xl': '1280px',
     },
-    fontFamily:{
-      Truculenta:['"Truculenta"', ]
-    },
+
     backgroundSize:{
       'auto': 'auto',
       'cover': 'cover',
@@ -24,6 +29,7 @@ export default {
       '100%': '100%',
       '105%': '105%'
     },
+
     // height:{
     //   'custom':'72px',
     // },
