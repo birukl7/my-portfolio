@@ -20,7 +20,7 @@ import polygon10 from '/images/home-images/Vector 12.svg'
 
 function LandingPage() {
   const [screenH, setScreenH] =useState(window.innerHeight)
-  const [text, setText]= useState('')
+  // const [text, setText]= useState('')
   useEffect(()=>{
     const handleResize= ()=>{
       setScreenH(window.innerHeight)
@@ -31,24 +31,24 @@ function LandingPage() {
     }
   }, [])
 
-    const textload=()=>{
-      setTimeout(()=>{
-        setText('UI/UX designer.')
-      }, 0);
-      setTimeout(()=>{
-        setText('enthusiast learner.')
-      }, 4000);
-      setTimeout(()=>{
-        setText('web developer.')
-      }, 8000);
-    }
+    // const textload=()=>{
+    //   setTimeout(()=>{
+    //     setText('UI/UX designer.')
+    //   }, 0);
+    //   setTimeout(()=>{
+    //     setText('enthusiast learner.')
+    //   }, 4000);
+    //   setTimeout(()=>{
+    //     setText('web developer.')
+    //   }, 8000);
+    // }
 
-    textload()
-    setInterval(textload, 12000);
-    useEffect(()=>{
-      const textChange = document.querySelector('.js-text');
-      textChange.textContent = text; 
-    },[text])
+    // textload()
+    // setInterval(textload, 12000);
+    // useEffect(()=>{
+    //   const textChange = document.querySelector('.js-text');
+    //   textChange.textContent = text; 
+    // },[text])
 
 
   return (
@@ -59,9 +59,18 @@ function LandingPage() {
           <div className='  bg-yellow-400 dark:bg-blue-400' id='landing-pic-container'>
             <img src={myPicture} alt="" className='' id='landing-pic'/>
           </div>
-          <div className='mt-3'>
+          <div className='mt-3 flex flex-col '>
             <h1 className='text-center sm:text-7xl text-6xl font-Truculenta font-extrabold '>Biruk Lemma</h1>
-            <p className='text-center my-4 text-xl font-Truculenta block mx-auto'> I'm a <span className='js-text css-text'></span></p>
+            <div className='flex items-start justify-center '>
+              <p className=' my-4 text-xl font-Truculenta'> I'm </p>
+              <ul className='my-4 text-xl font-Truculenta dynamic-texts'>
+                <li><span className='js-text css-text'>&nbsp; an Enthusiast Learner.</span></li>
+                <li><span className='js-text css-text'>&nbsp; a web developer.</span></li>
+                <li><span className='js-text css-text'>&nbsp; a UI/UX designer.</span> </li>
+                 
+              </ul>
+            </div>
+ 
           </div>
           <ul className='flex justify-around sm:my-5 my-4'>
           

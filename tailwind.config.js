@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        'blue-black' : '#020024'
+        'blue-black' : '#020024',
+        'dark-blue-1': '#302F4E'
       },
       fontFamily:{
         Truculenta:['"Truculenta"', ]

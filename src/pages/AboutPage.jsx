@@ -11,14 +11,14 @@ function AboutPage() {
       <div className='sm:mb-10'>
         <h2 className='text-5xl font-Truculenta font-semibold py-3'>About Me</h2>
       </div>
-      <div className='flex '>
+      <div className='flex gap-x-6'>
         <div className='hidden sm:inline-block bg-yellow-500 dark:bg-blue-500 rounded-full about-pic-css'>
           <img src={myPicture} className='w-full h-full object-contain' alt="profile" />
         </div>
-        <div className='bg-gray-800 dark:bg-white p-5 rounded-2xl sm:w-11/12'>
+        <div className='bg-dark-blue-1 dark:bg-white p-5 rounded-2xl sm:w-11/12'>
           <div className=''>
-              <p className='pl-1'>I am Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nemo! Lorem ipsum dolor sit amet.lorem10  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, culpa! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit architecto repellat harum obcaecati! Libero voluptates perferendis blanditiis animi quaerat maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur fugiat ipsum ad explicabo cupiditate labore? Amet blanditiis quibusdam dolorum, modi earum porro beatae est reiciendis aspernatur, pariatur obcaecati accusantium?</p>
-              <p className='mt-4'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, adipisci recusandae. Veniam est quasi delectus, deserunt possimus at! Amet quos ex rerum illo reprehenderit necessitatibus repellat? Laudantium sed dicta ipsa nobis ea obcaecati perferendis totam error dolorem consequuntur libero neque animi soluta excepturi nam cumque voluptatum ut nostrum repellendus ipsum rerum, nulla eum tempora. Quaerat, voluptatum officia, delectus adipisci sit laborum eius explicabo dolor nisi esse, totam obcaecati est ad placeat minus! Molestiae ab quos expedita, mollitia tempore illo ex atque assumenda dolore corrupti voluptatibus laudantium! Quidem dolore suscipit, eius asperiores quia, deserunt, et minima est ducimus quos non obcaecati?</p>
+              <p className=' pl-1'>I am Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nemo! Lorem ipsum dolor sit amet.lorem10  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, culpa! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit architecto repellat harum obcaecati! Libero voluptates perferendis blanditiis animi quaerat maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur fugiat ipsum ad explicabo cupiditate labore? Amet blanditiis quibusdam dolorum, modi earum porro beatae est reiciendis aspernatur, pariatur obcaecati accusantium?</p>
+
               <PrimaryButton text={'Download Resume'} class={'mt-6 '}/>
             </div>
           <div className='p-3 pt-5'>
