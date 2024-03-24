@@ -9,10 +9,13 @@ export default {
     extend: {
       colors:{
         'blue-black' : '#020024',
-        'dark-blue-1': '#302F4E'
+        'dark-blue-1': '#302F4E',
+        'bg-blue' : 'rgb(2,0,36)',
       },
       fontFamily:{
-        Truculenta:['"Truculenta"', ]
+        Truculenta:['"Truculenta"', ],
+        Inter : ['"Inter"',],
+        RobotoCondensed : ['"Roboto Condensed"'],
       },
     },
     screens:{

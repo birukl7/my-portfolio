@@ -81,7 +81,7 @@ function LandingPage() {
             <a href="#"><FontAwesomeIcon className='text-3xl sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faTelegram}/></a>
           </ul>
          
-          <button className='bg-red-500 dark:text-white w-auto my-0 mx-auto px-8 py-3 font-semibold  rounded-full hover:bg-red-600 transition-all duration-300 ease-in-out'>Say Hi</button>
+          <button className='bg-red-500 dark:text-white w-auto my-0 mx-auto px-7 py-2 font-semibold text-sm  rounded-full hover:bg-red-600 transition-all duration-300 ease-in-out'>Say Hi</button>
           
         </div>
         {screenH >= 760 ? (
