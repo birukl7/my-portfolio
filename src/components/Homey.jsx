@@ -7,7 +7,7 @@ import profilePictureDark from '/images/home-images/logo.png';
 import profilePictureLight from '/images/home-images/logo-dark.png';
 
 function Homey() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark'); // changed here light->DARK
   const [dropDown, setDropDown] = useState(false);
   const [currentSection, setCurrentSection] = useState('home');
   const dropdownRef = useRef(null);
@@ -47,7 +47,7 @@ function Homey() {
   };
 
   const systemTheme = () => {
-    const darkQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const darkQuery = !window.matchMedia('(prefers-color-scheme: dark)').matches; //changed here !
     setTheme(darkQuery ? 'light' : 'dark');
     setDropDown(false);
   };
