@@ -7,7 +7,7 @@ import profilePictureDark from '/images/home-images/logo.png';
 import profilePictureLight from '/images/home-images/logo-dark.png';
 
 function Homey() {
-  const [theme, setTheme] = useState('dark'); // changed here light->DARK
+  const [theme, setTheme] = useState('light'); // changed here light->DARK
   const [dropDown, setDropDown] = useState(false);
   const [currentSection, setCurrentSection] = useState('home');
   const dropdownRef = useRef(null);
@@ -47,7 +47,7 @@ function Homey() {
   };
 
   const systemTheme = () => {
-    const darkQuery = !window.matchMedia('(prefers-color-scheme: dark)').matches; //changed here !
+    const darkQuery = !window.matchMedia('(prefers-color-scheme: light)').matches; //changed here !
     setTheme(darkQuery ? 'light' : 'dark');
     setDropDown(false);
   };
@@ -87,8 +87,8 @@ function Homey() {
            before:bg-slate-100 before:dark:bg-slate-900 before:block before:w-full before:absolute before:bottom-2 before:h-1 before:rounded-full cursor-pointer before:transition-all  before:ease-in-out before:duration-200 after:transition-all after:ease-in-out after:duration-200 
            md:hidden' onClick={toggleMobileNav} id='hamburger'/>
         </div>
-        <nav className='fixed top-0 bottom-0  transition ease-in-out duration-300 overflow-hidden left-0 bg-dark-blue-1  backdrop-blur-3xl  dark:bg-slate-300 flex flex-col  justify-between items-center w-0 text-sm font-light dark:font-semibold
-        md:w-auto md:static md:flex-row md:items-center md:-mb-8 md:pt-0 md:px-7 md:top-0 md:h-16 md:overflow-visible md:-mt-4 md:bg-transparent md:dark:bg-transparent  md:pb-0 z-50' id='nav-bar'>
+        <nav className='fixed h-screen top-0 bottom-0   transition ease-in-out duration-300 overflow-hidden  bg-dark-blue-1  backdrop-blur-3xl  dark:bg-slate-300 flex flex-col  justify-between items-center w-0 text-sm font-light dark:font-semibold
+        md:w-auto md:static md:flex-row md:items-center md:-mb-8 md:pt-0 md:px-7 md:top-0 md:h-16 md:overflow-visible md:-mt-4 md:bg-transparent md:dark:bg-transparent  md:pb-0 z-50 ' id='nav-bar'>
           <ul className='flex flex-col items-center justify-between pt-7
           md:flex-row md:pt-5 md:pl-3 '>
             {navLinks.map(navLink => (
