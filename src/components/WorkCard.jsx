@@ -12,12 +12,11 @@ function WorkCard(props) {
 
     <p className='py-1 px-4 line-clamp-4 '>Link Building is a method SEO professionals use to generate backlinks that compel search engines to rank thier websited higher on search results LinkBuilders makes it easier for ...</p>
 
-    <div className='flex justify-between items-center px-4 py-3 mt-2'>
-      <button className='outline outline-1 p-2 rounded-md font-bold' >
+    <div className='flex justify-between gap-x-1 sm:gap-auto items-center px-4 py-3 mt-2'>
+      <button className='outline outline-1 p-2 rounded-md font-bold w-36 sm:w-auto' >
         <a href= {!props.readLink ? "#" : props.readLink} className='mr-2 flex items-center hover:gap-x-3 transition-all duration-300 ease-linear'>Read More<FontAwesomeIcon icon={faArrowRight} className='ml-2'/></a>
-        
       </button>
-      <span><Technology text={!props.firstTech?'Node js': props.firstTech} class={'bg-slate-50 text-black  uppercase text-sm py-1 px-3 shadow-sm shadow-yellow-200'}/> <Technology text={!props.secondTech ? 'Mongo DB' : props.secondTech} class={'bg-slate-50 shadow-sm shadow-yellow-200 text-black py-1 px-3 uppercase text-sm'}/></span>
+      <span className='flex gap-x-2'><Technology text={!props.firstTech?'Node js': props.firstTech} class={'bg-slate-50 text-black  sm:uppercase text-sm py-1 px-3 shadow-sm shadow-yellow-200  capitalize'}/> <Technology text={!props.secondTech ? 'Mongo DB' : props.secondTech} class={'bg-slate-50 shadow-sm shadow-yellow-200 text-black py-1 px-3 sm:uppercase text-sm capitalize'}/></span>
     </div>
     
     
