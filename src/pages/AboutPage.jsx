@@ -4,12 +4,13 @@ import Progress from '../components/Progress'
 import Numbers from '../components/Numbers'
 import { faCertificate, faCoffee, faPeopleCarry, faPeopleGroup, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import myPicture from '/images/body-images/my-picture.svg'
+import SectionTitle from '../components/SectionTitle'
 
 function AboutPage() {
   return (
     <section id='about' className='h-auto pt-16  md:pt-28'>
       <div className='sm:mb-10'>
-        <h2 className='text-5xl font-Truculenta font-semibold py-3'>About Me</h2>
+        <SectionTitle text={'About Me'} />
       </div>
       <div className='flex gap-x-6 '>
         <div className='hidden sm:inline-block bg-yellow-500 dark:bg-blue-500 rounded-full about-pic-css'>

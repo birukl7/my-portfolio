@@ -62,9 +62,11 @@ function Homey() {
     hamburger.classList.toggle('before:-rotate-45')
     hamburger.classList.toggle('before:translate-y-3')
 
-    navBar.classList.toggle('p-5');
-    navBar.classList.toggle('w-80');
-    navBar.classList.toggle('w-0');
+    // navBar.classList.toggle('p-5');
+    navBar.classList.toggle('left-0')
+    navBar.classList.toggle('-left-full')
+    // navBar.classList.toggle('w-80');
+    // navBar.classList.toggle('w-0');
   };
 
   const navLinks = [
@@ -82,12 +84,14 @@ function Homey() {
       <header className='text-md font-semibold p-2 fixed w-full  dark:bg-slate-200 max-w-screen-xl my-0 mx-auto right-0 left-0 bg-bg-blue  backdrop-blur-3xl
       md:flex md:justify-between md:items-center md:pb-4 z-10'>
         <div className='flex justify-between items-center'>
-          <img className='w-20 md:mt-3' src={theme === 'dark' ? profilePictureLight : profilePictureDark} alt="" />
-          <div className='w-9 h-1 bg-slate-100 dark:bg-slate-900 rounded-full relative after:bg-slate-100 after:dark:bg-slate-900 after:block after:w-full after:absolute after:top-2 after:h-1 after:rounded-full 
+          <img className='w-20 md:mt-3 ml-2 sm:ml-0' src={theme === 'dark' ? profilePictureLight : profilePictureDark} alt="" />
+          
+          <div className='w-7 h-1 mr-1 bg-slate-100 dark:bg-slate-900 rounded-full relative after:bg-slate-100 after:dark:bg-slate-900 after:block after:w-full after:absolute after:top-2 after:h-1 after:rounded-full 
            before:bg-slate-100 before:dark:bg-slate-900 before:block before:w-full before:absolute before:bottom-2 before:h-1 before:rounded-full cursor-pointer before:transition-all  before:ease-in-out before:duration-200 after:transition-all after:ease-in-out after:duration-200 
-           md:hidden' onClick={toggleMobileNav} id='hamburger'/>
+           md:hidden' onClick={toggleMobileNav} id='hamburger'></div>
         </div>
-        <nav className='fixed h-screen top-0 -bottom-40 left-0 right-20 transition ease-in-out duration-300 overflow-hidden  bg-dark-blue-1  backdrop-blur-3xl  dark:bg-slate-300 flex flex-col  justify-between items-center w-0 text-sm font-light dark:font-semibold
+
+        <nav className='fixed h-screen top-0 -bottom-40 -left-full right-20 transition-left ease-in-out duration-700 p-5 overflow-hidden  bg-dark-blue-1  backdrop-blur-3xl  dark:bg-slate-300 flex flex-col  justify-between items-center w-80 text-sm font-light dark:font-semibold
         md:w-auto md:static md:flex-row md:items-center md:-mb-8 md:pt-0 md:px-7 md:top-0 md:h-16 md:overflow-visible md:-mt-4 md:bg-transparent md:dark:bg-transparent  md:pb-0 z-50 ' id='nav-bar'>
           <ul className='flex flex-col items-center justify-between pt-7
           md:flex-row md:pt-5 md:pl-3 '>
@@ -100,7 +104,7 @@ function Homey() {
               </li>
             ))}
           </ul>
-          <ul className='w-full -mt-8 md:hidden'>
+          <ul className='w-full -mt-8 md:hidden '>
             <li><hr className='w-28 my-0 mx-auto mb-2 bg-slate-800 h-0.5' /></li>
             <ul className='flex justify-center gap-5 text-xl'>
               <a href="#" className='hover:text-yellow-300 dark:hover:text-red-400 transition ease-in-out duration-300'><li><FontAwesomeIcon icon={faGithub} /></li></a>

@@ -28,14 +28,30 @@ function App() {
     };
   }, []);
 
+  const toggleMobileNav = () => {
+    const navBar = document.querySelector('#nav-bar');
+    const hamburger = document.querySelector('#hamburger');
+    hamburger.classList.add('h-1')
+    hamburger.classList.remove('h-0')
+    hamburger.classList.remove('after:rotate-45')
+    hamburger.classList.remove('after:-translate-y-2')
+    hamburger.classList.remove('before:-rotate-45')
+    hamburger.classList.remove('before:translate-y-3')
+
+    // navBar.classList.remove('p-5');
+    // navBar.classList.remove('w-80');
+    // navBar.classList.add('w-0');
+    navBar.classList.remove('left-0')
+    navBar.classList.add('-left-full')
+  };
 
 
   return (
     <>
-      {!isTouchDevice && <Cursor />}
+      {/* {!isTouchDevice && <Cursor />} */}
       {/* <Cursor /> */}
       <Homey />
-      <main className='max-w-screen-xl my-0 mx-auto w-11/12 -z-20 '>
+      <main className='max-w-screen-xl my-0 mx-auto w-11/12 -z-20 ' onClick={toggleMobileNav}>
         <LandingPage />
         <AboutPage />
         <Service class={''} classSec={''} />

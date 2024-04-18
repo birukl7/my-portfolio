@@ -48,7 +48,7 @@ function Cursor() {
     circleElements.push(
       <div
         key={i}
-        className="circle  bg-white"
+        className=" outline outline-1"
         style={{
           position: 'absolute',
           display: 'block',
@@ -62,7 +62,7 @@ function Cursor() {
 
   return (
     <>
-      <div className="cursor" style={{ pointerEvents: 'none', position: 'fixed', display: 'block', borderRadius: 0, mixBlendMode: 'difference', top: 0, left: 0, zIndex: 5 }}>
+      <div className="cursor " style={{ pointerEvents: 'none', position: 'fixed', display: 'block', borderRadius: 0, mixBlendMode: 'difference', top: 0, left: 0, zIndex: -5 }}>
         {circleElements}
       </div>
     </>

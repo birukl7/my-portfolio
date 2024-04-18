@@ -7,12 +7,13 @@ import benKolde from '/images/body-images/ben-kolde.jpg'
 import { faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import Technology from '../components/Technology'
 import WorkCard from '../components/WorkCard'
+import SectionTitle from '../components/SectionTitle'
 
 
 function RecentWorks() {
   return (
     <section id='works'>
-      <h2 className='text-5xl font-Truculenta font-semibold py-4 pb-10'>Recent Works</h2>
+      <SectionTitle text={'Recent Work'} />
       <div>
         <ul className='flex justify-start gap-x-5 gap-y-3 flex-wrap'>
           <li><SecondaryBtn text={'Everything'}/></li>

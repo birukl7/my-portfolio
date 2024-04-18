@@ -10,10 +10,10 @@ function Numbers(props) {
   return (
     <div className='p-4 flex items-start pl-10 my-4 gap-x-3 bg-gray-800 dark:bg-white rounded-2xl'>
       <div className={`flex justify-start items-start pt-2 `}>
-        <FontAwesomeIcon className={'text-4xl font-light'} icon={props.icon}/>
+        <FontAwesomeIcon className={'text-3xl font-light'} icon={props.icon}/>
       </div>
       <div className='pl-2'>
-        <strong className={'text-4xl font-Truculenta font-semibold'}>{message}</strong>
+        <strong className={'text-2xl font-Truculenta font-semibold '}>{message}</strong>
         <p className='font-truclunta font-Truculenta font-semibold '>{props.message}</p>
       </div>
     </div>
