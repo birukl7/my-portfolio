@@ -107,9 +107,9 @@ function Homey() {
           <ul className='w-full -mt-8 md:hidden '>
             <li><hr className='w-28 my-0 mx-auto mb-2 bg-slate-800 h-0.5' /></li>
             <ul className='flex justify-center gap-5 text-xl'>
-              <a href="#" className='hover:text-yellow-300 dark:hover:text-red-400 transition ease-in-out duration-300'><li><FontAwesomeIcon icon={faGithub} /></li></a>
-              <a href="#" className='hover:text-yellow-300 dark:hover:text-red-400 transition ease-in-out duration-300'><li><FontAwesomeIcon icon={faLinkedinIn} /></li></a>
-              <a href="#" className='hover:text-yellow-300 dark:hover:text-red-400 transition ease-in-out duration-300'><li><FontAwesomeIcon icon={faTelegram} /></li></a>
+              <a href="https://github.com/birukl7" className='hover:text-yellow-300 dark:hover:text-red-400 transition ease-in-out duration-300'><li><FontAwesomeIcon icon={faGithub} /></li></a>
+              <a href="https://linkedin.com/in/biruk-lemma" className='hover:text-yellow-300 dark:hover:text-red-400 transition ease-in-out duration-300'><li><FontAwesomeIcon icon={faLinkedinIn} /></li></a>
+              <a href="https://t.me/birukl_777" className='hover:text-yellow-300 dark:hover:text-red-400 transition ease-in-out duration-300'><li><FontAwesomeIcon icon={faTelegram} /></li></a>
             </ul>
             <li><hr className='w-28 my-0 mx-auto mt-2 bg-slate-800 h-0.5' /></li>
           </ul>

@@ -10,7 +10,7 @@ function WorkCard(props) {
     <div className='h-60 w-full  bg-no-repeat  bg-center  hover bg-100% hover:bg-105% transition-all duration-150 ease-in-out' style={{backgroundImage: `url(${props.pic})`}}></div>
     <span className='flex justify-between py-4 px-4'> <h4 className='text-3xl font-semibold font-Truculenta text'>{props.title}</h4><span className='flex items-center gap-x-4 '><a href={props.siteLink ? props.siteLink : '#'} className='underline hover:text-blue-400'>Visit Site</a><a href={props.gitLink? props.gitLink : "#"} className='text-2xl'><FontAwesomeIcon icon={faGithub} className='hover:text-yellow-300 dark:hover:text-blue-400 transition-all duration-150 ease-in-out'/></a></span></span>
 
-    <p className='py-1 px-4 line-clamp-4 '>Link Building is a method SEO professionals use to generate backlinks that compel search engines to rank thier websited higher on search results LinkBuilders makes it easier for ...</p>
+    <p className='py-1 px-4 line-clamp-4 '>{ !props.description ? 'Link Building is a method SEO professionals use to generate backlinks that compel search engines to rank thier websited higher on search results LinkBuilders makes it easier for ...': props.description}</p>
 
     <div className='flex justify-between gap-x-1 sm:gap-auto items-center px-4 py-3 mt-2'>
       <button className='outline outline-1 p-2 rounded-md font-bold w-36 sm:w-auto' >
