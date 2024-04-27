@@ -11,6 +11,7 @@ import LandingPage from './pages/LandingPage';
 import RecentWorks from './pages/RecentWorks';
 import Service from './pages/Service';
 import Cursor from './components/Cursor';
+import bgImage from '/images/body-images/bg-image-1.jpg';
 
 function App() {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -50,17 +51,68 @@ function App() {
     <>
       {/* {!isTouchDevice && <Cursor />} */}
       {/* <Cursor /> */}
-      <Homey />
-      <main className='max-w-screen-xl my-0 mx-auto w-11/12 -z-20 ' onClick={toggleMobileNav}>
-        <LandingPage />
-        <AboutPage />
-        <Service class={''} classSec={''} />
-        <Experience />
-        <RecentWorks />
-        <Clients />
-        <Contact />
-      </main>
-      <Footer />
+      <section className=' '>
+        <div>
+          <Homey class={'text-slate-100 dark:text-slate-900'}/>
+        </div>
+        <div className=' md:pl-custom-p'>
+          <main className='-z-20  ' onClick={toggleMobileNav}>
+
+            <div className='max-w-screen-xl my-0 mx-auto w-11/12 text-slate-100 dark:text-slate-900' >
+            <LandingPage />
+            </div>
+            
+            <div className=' bg-white text-slate-900 dark:text-slate-900 md:h-screen' >
+              <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
+                <AboutPage />
+              </div>
+            </div>
+            
+            <div className='text-slate-100 dark:text-slate-900 '>
+              <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
+                <Service class={''} classSec={''} />
+              </div>
+            </div>
+            
+            <section className='text-slate-100 dark:text-slate-900 ' >
+              <div className='max-w-screen-xl my-0 mx-auto w-11/12 md:h-screen flex justify-center items-center'>
+                <Experience />
+              </div>
+            </section>
+            
+            <div className='text-slate-100 dark:text-slate-900 '>
+              <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
+                <RecentWorks />
+              </div>
+            </div>
+            
+            <div className='text-slate-100 dark:text-slate-900 '>
+              <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
+                <Clients />
+              </div>
+            </div>
+
+            <div className='text-slate-100 dark:text-slate-900 '>
+              <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
+                <Contact />
+              </div>
+            </div>
+            
+            
+          </main>
+
+            <div className='text-slate-100 dark:text-slate-900 -z-30'>
+              <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
+                <Footer />
+              </div>
+            </div>
+
+          
+        </div>
+
+      </section>
+      
+
     </>
   );
 }

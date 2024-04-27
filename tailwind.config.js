@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import bgImage from '/images/body-images/bg-image-1.jpg';
 export default {
   content: [
     "./index.html",
@@ -7,16 +8,32 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      backgroundImage: theme => ({
+        'image': `url(/images/body-images/bg-image-1.jpg)`,
+      }),
       colors:{
         'blue-black' : '#020024',
         'dark-blue-1': '#302F4E',
         'bg-blue' : 'rgb(2,0,36)',
+        'custom-color-1': '#fff',
       },
       fontFamily:{
         Truculenta:['"Truculenta"', ],
         Inter : ['"Inter"',],
         RobotoCondensed : ['"Roboto Condensed"'],
       },
+      inset:{
+        'custom-right': '840px'
+      },
+      width:{
+        'custom-w': '315px'
+      },
+      padding:{
+        'custom-p': '315px'
+      },
+      margin:{
+        'custom-m': '315px'
+      }
     },
     screens:{
       'sm': '640px',
@@ -37,6 +54,7 @@ export default {
     // height:{
     //   'custom':'72px',
     // },
+
   },
   plugins: [],
 }

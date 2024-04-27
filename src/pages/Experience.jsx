@@ -6,10 +6,9 @@ import SectionTitle from '../components/SectionTitle'
 
 function Experience() {
   return (
-    <section id='expert' className='pt-12 '>
+    <section className='pt-12 ' id='expert'>
       <SectionTitle text={'Experience'} />
       <div className={'grid sm:grid-cols-2 gap-x-3 gap-y-3 pb-20'}>
-
         <ul id='education' className='bg-slate-800 dark:bg-white p-3 rounded-xl'> 
           <ExperienceCard />
           <ExperienceCard />

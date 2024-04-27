@@ -4,7 +4,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className='py-3 mt-10 bg-black flex items-center justify-center gap-x-7 dark:text-white'>
+    <footer className='py-3 mt- flex items-center justify-center gap-x-7 dark:text-white'>
       <div className='flex flex-col items-center'>
         <h5>@2024 Biruk Lemma</h5>
         <h5>Inspired by Bolby website theme</h5>
