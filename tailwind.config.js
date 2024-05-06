@@ -21,6 +21,7 @@ export default {
         Truculenta:['"Truculenta"', ],
         Inter : ['"Inter"',],
         RobotoCondensed : ['"Roboto Condensed"'],
+        RocknRollOne : ['"RocknRoll One"']
       },
       inset:{
         'custom-right': '840px'
@@ -33,6 +34,16 @@ export default {
       },
       margin:{
         'custom-m': '315px'
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(360deg)' },
+        },
+
+      },
+      animation: {
+        wiggle: 'wiggle 30s ease-in-out infinite',
       }
     },
     screens:{

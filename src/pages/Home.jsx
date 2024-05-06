@@ -22,6 +22,7 @@ function Home() {
         <div className='flex flex-col items-centers'>
           <div className='  bg-yellow-400 dark:bg-blue-400' id='landing-pic-container'>
             <img src={myPicture} alt="" className='' id='landing-pic'/>
+            
           </div>
           <div className='mt-3'>
             <h1 className='text-center sm:text-7xl text-6xl font-Truculenta font-extrabold hover:text-red-700'>Biruk Lemma</h1>
