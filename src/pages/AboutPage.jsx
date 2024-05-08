@@ -18,7 +18,11 @@ function AboutPage() {
         </div>
         <div className=' bg-inherit dark:bg-white p-5 rounded-2xl sm:w-11/12 outline outline-1 '>
           <div className=' '>
-              <p className=' pl-1 font-RobotoCondensed font-light dark:font-semibold  font-semibold'>I am Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nemo! Lorem ipsum dolor sit amet.lorem10  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, culpa! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit architecto repellat harum obcaecati! Libero voluptates perferendis blanditiis animi quaerat maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur fugiat ipsum ad explicabo cupiditate labore? Amet blanditiis quibusdam dolorum, modi earum porro beatae est reiciendis aspernatur, pariatur obcaecati accusantium?</p>
+              <p className=' pl-1 font-RobotoCondensed font-light dark:font-semibold  font-semibold'>
+                My passion for technology and innovation began in my senior year of high school when I tried to build library management system for my highschool - turns out there's so much to you could do further more. Fast forward to today, and I've had the privilege of building software for  businesses, startups, and university.
+
+                These days, my main focus is on developing web and mobile technology-based products and impactful projects.
+              </p>
 
               <PrimaryButton text={'Download Resume'} class={'mt-6 text-white'}/>
             </div>
@@ -30,10 +34,10 @@ function AboutPage() {
         </div>
       </div>
       <div className='grid sm:grid-cols-2 gap-x-4 mt-5 md:grid-cols-4'> 
-        <Numbers icon={faThumbsUp} number={'12'} message={'Projects Completed'} bgColor={'bg-slate-300'}/>
-        <Numbers icon={faPeopleGroup} number={'5'} message={'Satasfied Clients'} bgColor={'bg-slate-300'}/>
-        <Numbers icon={faCoffee} number={'3'} message={'Cup of Coffee'} bgColor={'bg-slate-300'}/>
-        <Numbers icon={faCertificate} number={'4'} message={'Qualification Certificates'} bgColor={'bg-slate-300'}/>
+        <Numbers icon={faThumbsUp} number={'3'} message={'Projects Completed'} bgColor={'bg-slate-300'}/>
+        <Numbers icon={faPeopleGroup} number={'4'} message={'Satasfied Clients'} bgColor={'bg-slate-300'}/>
+        <Numbers icon={faCoffee} number={'1'} message={'Cup of Coffee'} bgColor={'bg-slate-300'}/>
+        <Numbers icon={faCertificate} number={'2'} message={'Qualification Certificates'} bgColor={'bg-slate-300'}/>
       </div>
     </section>
   )

@@ -70,7 +70,7 @@ function LandingPage() {
 
           </div>
 
-          <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-0 sm:-right-28 hidden sm:flex'} width={'w-36 '}/>
+          <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-0 sm:-right-28 hidden sm:flex'} message={'Emphasize on functionlaity'} width={'w-36 '}/>
           {/* <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-32 sm:-right-28 hidden sm:flex'} message={'Team Oriented'} width={'w-24'}/>
           <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-28 sm:-left-32 hidden sm:flex'} message={'Responsive Design'} width={'w-28'}/> */}
 
@@ -79,9 +79,9 @@ function LandingPage() {
             <div className='flex items-start justify-center '>
               <p className=' my-4 text-xl font-Truculenta'> I'm </p>
               <ul className='my-4 text-xl font-Truculenta dynamic-texts'>
-                <li><span className='js-text css-text'>&nbsp; an Enthusiast Learner.</span></li>
-                <li><span className='js-text css-text'>&nbsp; a web developer.</span></li>
-                <li><span className='js-text css-text'>&nbsp; a UI/UX designer.</span> </li>
+                <li><span className='js-text css-text'>&nbsp; an Enthusiast Learner,</span></li>
+                <li><span className='js-text css-text'>&nbsp;a <a href="https://en.wikipedia.org/wiki/Web_developer" target='_blank' className='underline dark:font-bold'>Web developer</a>,</span></li>
+                <li><span className='js-text css-text'>&nbsp; a <a href="" className='underline dark:font-bold'>UI/UX designer</a>.</span> </li>
                  
               </ul>
             </div>

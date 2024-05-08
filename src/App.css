@@ -62,27 +62,27 @@ body{
     background: initial;
 }
 
-.dynamic-texts{
+/* .dynamic-texts{
     height: 26px;
     overflow: hidden;
-}
+} */
 
 
-.dynamic-texts li{
+/* .dynamic-texts li{
     position: relative;
     top: 0;
     animation: slide 9s steps(3) infinite;
-}
+} */
 
-@keyframes slide {
+/* @keyframes slide {
     100%{
         top: -83px;
     }
-}
+} */
 
 
 
-.css-text{
+/* .css-text{
     position: relative;
 }
 
@@ -96,7 +96,7 @@ body{
     background-color: rgb(2, 0, 36);
     border-left: 2px solid white;
     animation: animate 3s steps(28) infinite;
-}
+} */
 
 .dark .css-text::before{
     background-color: rgb(241, 245, 249);

@@ -11,7 +11,7 @@ function Numbers(props) {
         <FontAwesomeIcon className={'text-3xl font-light'} icon={props.icon}/>
       </div>
       <div className='pl-2'>
-        <strong className={'text-2xl font-Truculenta font-semibold '}>{message}</strong>
+        <strong className={'text-2xl font-Truculenta font-semibold '}>{props.number}</strong>
         <p className='font-truclunta font-Truculenta font-semibold '>{props.message}</p>
       </div>
     </div>
