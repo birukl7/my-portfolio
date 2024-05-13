@@ -3,8 +3,8 @@ import React from 'react'
 function Progress(props) {
   return (
     <div className={props.class}>
-      <div className="flex justify-between mb-1">
-        <span className="text-base font-medium ">{props.name}</span>
+      <div className="flex justify-between mb-4">
+        <span className="text-base font-semibold">{props.name}</span>
         <span className="text-sm font-medium">{props.percent}</span>
       </div>
 

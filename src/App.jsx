@@ -6,12 +6,12 @@ import Clients from './pages/Clients';
 import Contact from './pages/Contact';
 import Experience from './pages/Experience';
 import Footer from './pages/Footer';
-import Home from './pages/Home';
 import LandingPage from './pages/LandingPage';
 import RecentWorks from './pages/RecentWorks';
 import Service from './pages/Service';
 import Cursor from './components/Cursor';
 import bgImage from '/images/body-images/bg-image-1.jpg';
+import CenterMode from './components/AdaptiveHeight';
 
 function App() {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -62,7 +62,7 @@ function App() {
             <LandingPage />
             </div>
             
-            <div className=' bg-white text-slate-900 dark:text-slate-900 md:h-screen' >
+            <div className=' bg-slate-200 dark:bg-slate-100 text-slate-900 dark:text-slate-900 md:h-screen' >
               <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
                 <AboutPage />
               </div>
@@ -88,7 +88,8 @@ function App() {
             
             <div className='text-slate-100 dark:text-slate-900 '>
               <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
-                <Clients />
+                {/* <Clients /> */}
+                <CenterMode />
               </div>
             </div>
 

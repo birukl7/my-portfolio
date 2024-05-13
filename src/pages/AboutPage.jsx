@@ -16,9 +16,9 @@ function AboutPage() {
         <div className='hidden sm:inline-block bg-yellow-500 dark:bg-blue-500 rounded-full about-pic-css'>
           <img src={myPicture} className='w-full h-full object-contain' alt="profile" />
         </div>
-        <div className=' bg-inherit dark:bg-white p-5 rounded-2xl sm:w-11/12 outline outline-1 '>
-          <div className=' '>
-              <p className=' pl-1 font-RobotoCondensed font-light dark:font-semibold  font-semibold'>
+        <div className='sm:flex gap-x-4 bg-inherit bg-white p-5 rounded-2xl sm:w-11/12 shadow-xl'>
+          <div className='sm:w-1/2 pt-8 pl-3'>
+              <p className=' pl-1 font-RobotoCondensed dark:font-semibold '>
                 My passion for technology and innovation began in my senior year of high school when I tried to build library management system for my highschool - turns out there's so much to you could do further more. Fast forward to today, and I've had the privilege of building software for  businesses, startups, and university.
 
                 These days, my main focus is on developing web and mobile technology-based products and impactful projects.
@@ -26,13 +26,35 @@ function AboutPage() {
 
               <PrimaryButton text={'Download Resume'} class={'mt-6 text-white'}/>
             </div>
-          <div className='p-3 pt-5'>
-            <Progress name={'Development'} percent={'85%'} width={'85%'} barColor={'bg-yellow-400'} bgColor={'bg-slate-200'}/>
-            <Progress name={'UI/UX'} percent={'79%'} width={'79%'} class={'mt-3'} barColor={'bg-red-500'} bgColor={'bg-slate-200'}/>
-            <Progress name={'Mobile App'} percent={'75%'} width={'75%'} class={'mt-3'} barColor={'bg-blue-500'} bgColor={'bg-slate-200'}/>
+
+          <div className='p-3 pt-8 flex-1'>
+            <Progress 
+              name={'Development'} 
+              percent={'85%'} 
+              width={'85%'} 
+              barColor={'bg-yellow-400'}
+              bgColor={'bg-slate-200'}/>
+
+            <Progress 
+              name={'UI/UX'} 
+              percent={'79%'} 
+              width={'79%'} 
+              class={'mt-3'} 
+              barColor={'bg-red-500'}
+              bgColor={'bg-slate-200'}/>
+
+            <Progress 
+              name={'Mobile App'} 
+              percent={'75%'} 
+              width={'75%'} 
+              class={'mt-3'} 
+              barColor={'bg-blue-500'}
+              bgColor={'bg-slate-200'}/>
           </div>
         </div>
       </div>
+
+
       <div className='grid sm:grid-cols-2 gap-x-4 mt-5 md:grid-cols-4'> 
         <Numbers icon={faThumbsUp} number={'3'} message={'Projects Completed'} bgColor={'bg-slate-300'}/>
         <Numbers icon={faPeopleGroup} number={'4'} message={'Satasfied Clients'} bgColor={'bg-slate-300'}/>

@@ -106,6 +106,17 @@ body{
     border-left: 2px solid black;
 }
 
+.slick-dots li.slick-active button:before {
+    color:White !important;
+}
+
+.dark .slick-dots li.slick-active button:before {
+    color:black !important;
+}
+
+.slick-thumb li button::backdrop{
+    color: white !important;
+}
 
 
 

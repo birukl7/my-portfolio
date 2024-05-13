@@ -63,9 +63,9 @@ function LandingPage() {
   return (
     <section className="mb-5 relative"  id='home'>
       {/* A div element to center a container */}
-      <div className='h-screen  flex justify-center flex-col relative items-center '>
-        <div className='flex flex-col items-centers relative'>
-          <div className='  bg-yellow-400 dark:bg-blue-400 relative' id='landing-pic-container'>
+      <div className='h-screen  flex justify-center flex-col relative items-center mx-auto'>
+        <div className='flex flex-col items-centers relative justify-center mx-auto'>
+          <div className='mx-auto bg-yellow-400 dark:bg-blue-400 relative' id='landing-pic-container'>
             <img src={myPicture} alt ="" className='' id='landing-pic'/>
 
           </div>
@@ -74,14 +74,14 @@ function LandingPage() {
           {/* <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-32 sm:-right-28 hidden sm:flex'} message={'Team Oriented'} width={'w-24'}/>
           <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-28 sm:-left-32 hidden sm:flex'} message={'Responsive Design'} width={'w-28'}/> */}
 
-          <div className='mt-3 flex flex-col '>
-            <h1 className='text-center sm:text-7xl text-6xl font-Truculenta font-extrabold '>Biruk Lemma</h1>
+          <div className='mt-3 flex flex-col mx-auto'>
+            <h1 className='text-center sm:text-6xl text-5xl font-Truculenta font-extrabold '>Full-Stack Developer<span className='text-4xl'>👋</span></h1>
             <div className='flex items-start justify-center '>
-              <p className=' my-4 text-xl font-Truculenta'> I'm </p>
-              <ul className='my-4 text-xl font-Truculenta dynamic-texts'>
-                <li><span className='js-text css-text'>&nbsp; an Enthusiast Learner,</span></li>
-                <li><span className='js-text css-text'>&nbsp;a <a href="https://en.wikipedia.org/wiki/Web_developer" target='_blank' className='underline dark:font-bold'>Web developer</a>,</span></li>
-                <li><span className='js-text css-text'>&nbsp; a <a href="" className='underline dark:font-bold'>UI/UX designer</a>.</span> </li>
+              <p className=' my-4 text-xl font-Truculenta w-[310px] align-middle' style={{textAlign: 'center'}}> Hi, I'm Biruk Lemma. A passionate Front-end React Developer based in Ethiopia, Addis Ababa 📍.</p>
+              <ul className='my-4 text-xl font-Truculenta dynamic-texts hidden'>
+                {/* <li><span className='js-text css-text w-[20px]'>&nbsp; Hi, I'm Stefan Topalovic. A passionate Front-end React Developer based in Belgrade, Serbia</span></li> */}
+                {/* <li><span className='js-text css-text'>&nbsp;a <a href="https://en.wikipedia.org/wiki/Web_developer" target='_blank' className='underline dark:font-bold'>Web developer</a>,</span></li>
+                <li><span className='js-text css-text'>&nbsp; a <a href="" className='underline dark:font-bold'>UI/UX designer</a>.</span> </li> */}
                  
               </ul>
             </div>
@@ -102,7 +102,7 @@ function LandingPage() {
           
         </div>
         {screenH >= 760 ? (
-          <div className='flex flex-col items-center absolute bottom-3 ' >
+          <div className='flex flex-col items-center absolute bottom-3 mx-auto ' >
             <div className='p-3 outline outline-1 rounded-full w-5 h-10' >
               <div className='w-1 h-1 bg-white rounded-full dark:bg-black scroll-css' id='scroll'></div>
             </div>
@@ -110,7 +110,7 @@ function LandingPage() {
           </div>  
         ) : null}
       </div>   
-        <img src={polygon1} alt="" className='animate-[wiggle_30s_ease-in-out_infinite]  -z-20 absolute w-10 sm:top-80  sm:left-60 top-40 left-12 rotate-12 transition-all  duration-1000 ease-in-out ' />
+        {/* <img src={polygon1} alt="" className='animate-[wiggle_30s_ease-in-out_infinite]  -z-20 absolute w-10 sm:top-80  sm:left-60 top-40 left-12 rotate-12 transition-all  duration-1000 ease-in-out ' />
         <img src={polygon2} alt="" className='animate-[wiggle_20s_ease-in-out_infinite] -z-20 absolute w-10  sm:right-36 sm:bottom-10 top-16 right-20 rotate-6 transition-all  duration-1000 ease-in-out' />
         <img src={polygon3} alt="" className=' -z-20 absolute w-10 sm:top-32 top-32 transition-all  duration-1000 ease-in-out' />
         <img src={polygon4} alt="" className='  -z-20 absolute w-10 sm:bottom-20 top-56 right-0 transition-all  duration-1000 ease-in-out' />
@@ -119,7 +119,7 @@ function LandingPage() {
         <img src={polygon7} alt="" className='  -z-20 absolute w-10  sm:right-3/4 sm:bottom-80  left-0 bottom-80 transition-all  duration-1000 ease-in-out' />
         <img src={polygon8} alt="" className='  -z-20 absolute w-10 sm:bottom-80 sm:right-0 hidden sm:inline-block transition-all  duration-1000 ease-in-out' />
         <img src={polygon9} alt="" className='  -z-20 absolute w-10 sm:top-1/2 sm:right-80 hidden sm:inline-block transition-all  duration-1000 ease-in-out' />
-        <img src={polygon10} alt="" className='  -z-20 absolute w-10 sm:bottom-32 sm:right-72 hidden sm:inline-block  transition-all  duration-1000 ease-in-out' />
+        <img src={polygon10} alt="" className='  -z-20 absolute w-10 sm:bottom-32 sm:right-72 hidden sm:inline-block  transition-all  duration-1000 ease-in-out' /> */}
     </section>
   )
 }

@@ -11,7 +11,7 @@ function Testimony(props) {
         <h5 className='font-Truculenta text-2xl  font-semibold my-1'> {!props.name ?'John Doe': props.name}</h5>
         <p className='pb-3'>{!props.workTitle ? 'Product Designer at Dribble' : props.workTitle}</p>
       </div>
-      <div className='p-3 py-5 w-80 outline outline-1 rounded-md'>
+      <div className='px-3 py-5 w-80 rounded-md shadow-xl bg-[#171c49] dark:bg-white'>
         <p>I enjoy working with the theme and learn so much. You guys make the process so fun and interesting. Good Luck 😊</p>
       </div>
     </div>

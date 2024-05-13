@@ -3,8 +3,8 @@ import React from 'react'
 
 function ServiceCard(props) {
   return (
-    <div className='flex flex-col items-center rounded-xl overflow-hidden bg-gray-700 dark:bg-white'>
-      <div className='h-60 w-full  bg-no-repeat bg-cover bg-center ' style={{backgroundImage: `url(${props.image})`}}>
+    <div className='flex flex-col items-center rounded-xl overflow-hidden bg-slate-800 dark:bg-white transition duration-200 hover:-translate-y-3 shadow-xl'>
+      <div className='h-48 w-full  bg-no-repeat bg-cover bg-center ' style={{backgroundImage: `url(${props.image})`}}>
         </div>
       <div className='p-3'>
         <h3 className='font-semibold text-center py-2 font-Truculenta text-3xl'>{!props.title ? 'Web Development': props.title}</h3>
