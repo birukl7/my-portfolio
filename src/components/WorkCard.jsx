@@ -8,7 +8,7 @@ function WorkCard({ pic, title, siteLink, gitLink, description, readLink, firstT
   return (
     <div className='rounded-lg overflow-hidden bg-[#0b1e38] dark:bg-white dark:text-black transition-all duration-300 ease-in-out shadow-xl'>
       {/* Image container */}
-      <div className='h-60 w-full  bg-no-repeat  bg-center  hover bg-100% hover:bg-105% transition-all duration-150 ease-in-out' style={{backgroundImage: `url(${pic})`}}>
+      <div className='h-60 w-full  bg-no-repeat  bg-center  bg-100% hover:bg-105% transition-all duration-150 ease-in-out' style={{backgroundImage: `url(${pic})`}}>
     </div>
 
       {/* Title and links */}

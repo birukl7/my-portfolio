@@ -75,7 +75,7 @@ function LandingPage() {
           <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-28 sm:-left-32 hidden sm:flex'} message={'Responsive Design'} width={'w-28'}/> */}
 
           <div className='mt-3 flex flex-col mx-auto'>
-            <h1 className='text-center sm:text-6xl text-5xl font-Truculenta font-extrabold '>Full-Stack Developer<span className='text-4xl'>👋</span></h1>
+            <h1 className='text-center sm:text-6xl text-4xl font-Truculenta font-extrabold '>Full-Stack Developer<span className='text-4xl'>👋</span></h1>
             <div className='flex items-start justify-center '>
               <p className=' my-4 text-xl font-Truculenta w-[310px] align-middle' style={{textAlign: 'center'}}> Hi, I'm Biruk Lemma. A passionate Front-end React Developer based in Ethiopia, Addis Ababa 📍.</p>
               <ul className='my-4 text-xl font-Truculenta dynamic-texts hidden'>

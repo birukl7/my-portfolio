@@ -98,6 +98,17 @@ function App() {
                 <Contact />
               </div>
             </div>
+
+            <div>
+              <div className='max-w-screen-xl my-0 mx-auto max-w-4xl w-full mt-20 rounded-2xl overflow-hidden h-[400px]' >
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252230.0202980462!2d38.61333544125166!3d8.963479530449137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1715576975392!5m2!1sen!2set" 
+                  className='w-full h-full'
+                  >
+                </iframe>
+              </div>
+
+            </div>
             
             
           </main>
