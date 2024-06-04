@@ -11,7 +11,7 @@ function WorkCard({ pic, title, siteLink, gitLink, description, readLink, firstT
       <div className='h-60 w-full  bg-no-repeat  bg-center  bg-100% hover:bg-105% transition-all duration-150 ease-in-out' style={{backgroundImage: `url(${pic})`}}>
     </div>
 
-    <div className='flex justify-start ml-4 gap-x-2'>
+    <div className='flex justify-start ml-4 gap-x-2 mt-3'>
       <Technology text={firstTech} class={'bg-slate-50 text-black  sm:uppercase text-xs py-1 px-3 shadow-sm shadow-yellow-200  capitalize'} />
       <Technology text={secondTech} class={'bg-slate-50 shadow-sm shadow-yellow-200 text-black py-1 px-3 sm:uppercase text-xs capitalize'} />
     </div>

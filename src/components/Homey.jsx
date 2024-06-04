@@ -72,9 +72,10 @@ function Homey(props) {
   const navLinks = [
     { href: '#home', text: 'Home', icon: faHome },
     { href: '#about', text: 'About', icon: faUser},
+    { href: '#works', text: 'Works', icon: faSuitcase },
     { href: '#service', text: 'Service', icon: faChartSimple },
     { href: '#expert', text: 'Experience' , icon: faCubesStacked},
-    { href: '#works', text: 'Works', icon: faSuitcase },
+
     // { href: '#blog', text: 'Blog', icon: faFeather },
     { href: '#contact', text: 'Contact', icon: faAddressCard }
   ];
