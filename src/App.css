@@ -14,13 +14,11 @@ html{
 }
 
 #landing-pic-container{
-    width: 370px;
-    height: 333px;
-    overflow: hidden;
     clip-path: circle(45%);
 }
 
 #client-img-container{
+    
     width: 90px;
     height: 90px;
     overflow: hidden;
@@ -33,12 +31,6 @@ html{
     object-fit: cover;
 }
 
-
-#landig-pic-container img{
-    width:100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .scroll-css{
     transition: transform 1s ease-out;

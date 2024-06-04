@@ -16,6 +16,8 @@ function Contact() {
         <div className='md:w-full md:mt-0 mt-6'>
           <div className='flex  flex-col sm:flex-row px-3 '>
             <Input placeholder={'Your name'} class={'w-full mr-5 md:mb-0 mb-3 shadow-lg'}/>
+            {/* <input type="text" name="" className='rounded-full focus:ring-0 ring-white focus:ring-white' id="" /> */}
+            strength of material
             <Input placeholder={'Your email'} class={'w-full shadow-lg'}/>
           </div>
           <div className='flex flex-col gap-y-3 mt-3'>
