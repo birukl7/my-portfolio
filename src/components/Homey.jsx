@@ -91,7 +91,7 @@ function Homey(props) {
            md:hidden' onClick={toggleMobileNav} id='hamburger'></div>
         </div>
 
-        <nav className='fixed h-screen top-0 -bottom-40 -left-full right-20 transition-left ease-in-out duration-500 p-5 overflow-hidden  bg-dark-blue-1  backdrop-blur-3xl  dark:bg-slate-300 flex flex-col  justify-between items-center w-80 text-sm md:text-lg font-light dark:font-semibold
+        <nav className='fixed h-screen top-0 -bottom-40 -left-full right-24 transition-left ease-in-out duration-500 p-5 overflow-hidden  bg-dark-blue-1  backdrop-blur-3xl  dark:bg-slate-300 flex flex-col  justify-between items-center w-80 text-sm md:text-lg font-light dark:font-semibold
          md:top-0 md:w-custom-w md:bottom-0 md:left-0 z-50 md:z-40  md:justify-evenly' id='nav-bar'>
           <ul className='flex flex-col items-center justify-between pt-7
            md:pt-5 md:pl-3 md:mt-20'>

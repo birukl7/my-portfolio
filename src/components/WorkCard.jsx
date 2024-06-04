@@ -11,17 +11,24 @@ function WorkCard({ pic, title, siteLink, gitLink, description, readLink, firstT
       <div className='h-60 w-full  bg-no-repeat  bg-center  bg-100% hover:bg-105% transition-all duration-150 ease-in-out' style={{backgroundImage: `url(${pic})`}}>
     </div>
 
+    <div className='flex justify-start ml-4 gap-x-2'>
+      <Technology text={firstTech} class={'bg-slate-50 text-black  sm:uppercase text-xs py-1 px-3 shadow-sm shadow-yellow-200  capitalize'} />
+      <Technology text={secondTech} class={'bg-slate-50 shadow-sm shadow-yellow-200 text-black py-1 px-3 sm:uppercase text-xs capitalize'} />
+    </div>
+
       {/* Title and links */}
       <div className='flex justify-between py-4 px-4'>
         <h4 className='text-3xl font-semibold font-Truculenta text'>{title}</h4>
         <div className='flex items-center gap-x-4'>
-          <a href={siteLink ? siteLink : '#'} className='underline hover:text-blue-400'>Visit Site</a>
+          <a href={siteLink ? siteLink : '#'} className='underline hover:text-blue-400 text-xs md:text-sm'>Visit Site</a>
           <a href={gitLink ? gitLink : "#"} className='text-2xl'><FontAwesomeIcon icon={faGithub} className='hover:text-yellow-300 dark:hover:text-blue-400 transition-all duration-150 ease-in-out' /></a>
         </div>
       </div>
 
       {/* Clamped text paragraph */}
-      <p className='py-1 px-4 line-clamp-4'>{description ? description : 'Link Building is a method SEO professionals use to generate backlinks that compel search engines to rank thier websited higher on search results LinkBuilders makes it easier for ...'}</p>
+      <p className='py-1 px-4 line-clamp-4'>
+        {description ? description : 'Link Building is a method SEO professionals use to generate backlinks that compel search engines to rank thier websited higher on search results LinkBuilders makes it easier for ...'}
+      </p>
 
       <div className='flex justify-between gap-x-1 sm:gap-auto items-center px-4 py-3 mt-2'>
         <button className='bg-[#1688e6] p-2 rounded-md  hover:bg-transparent hover:outline hover:outline-1 font-bold w-36 sm:w-auto shadow-xl'>
@@ -29,10 +36,7 @@ function WorkCard({ pic, title, siteLink, gitLink, description, readLink, firstT
             Read More<FontAwesomeIcon icon={faArrowRight} className='ml-2' />
           </a>
         </button>
-        <div className='flex gap-x-2'>
-          <Technology text={firstTech} class={'bg-slate-50 text-black  sm:uppercase text-sm py-1 px-3 shadow-sm shadow-yellow-200  capitalize'} />
-          <Technology text={secondTech} class={'bg-slate-50 shadow-sm shadow-yellow-200 text-black py-1 px-3 sm:uppercase text-sm capitalize'} />
-        </div>
+ 
       </div>
 
      

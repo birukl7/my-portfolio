@@ -95,7 +95,7 @@ function LandingPage() {
             <a href="https://t.me/birukl_777"><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faTelegram}/></a>
           </ul>
          
-          <a href="#contact" className='bg-red-500 dark:text-white w-auto my-0 mx-auto px-7 py-2 font-semibold text-sm  rounded-full hover:bg-red-600 transition-all duration-300 ease-in-out mt-1'>
+          <a href="#contact" className='bg-red-500 dark:text-white w-auto my-0 mx-auto px-7 py-2 font-semibold text-sm  rounded-full hover:bg-red-600 transition-all duration-300 ease-in-out sm:mt-1 mt-7'>
             Say Hi
           </a>
 
