@@ -77,7 +77,7 @@ function LandingPage() {
           <div className='mt-3 flex flex-col mx-auto'>
             <h1 className='text-center sm:text-6xl text-4xl font-Truculenta font-extrabold '>Full-Stack Developer<span className='text-4xl'>👋</span></h1>
             <div className='flex items-start justify-center '>
-              <p className=' my-4 md:text-xl font-Truculenta sm:w-[310px] align-middle  w-[250px]' style={{textAlign: 'center'}}> Hi, I'm Biruk Lemma. A passionate Front-end React Developer based in Ethiopia, Addis Ababa 📍.</p>
+              <p className=' my-4 md:text-xl font-Truculenta sm:w-[310px] align-middle  w-[250px]' style={{textAlign: 'center'}}> Hi, I'm Biruk Lemma. A passionate Full-Stack Laravel Developer based in Ethiopia, Addis Ababa 📍.</p>
               <ul className='my-4 text-xl font-Truculenta dynamic-texts hidden'>
                 {/* <li><span className='js-text css-text w-[20px]'>&nbsp; Hi, I'm Stefan Topalovic. A passionate Front-end React Developer based in Belgrade, Serbia</span></li> */}
                 {/* <li><span className='js-text css-text'>&nbsp;a <a href="https://en.wikipedia.org/wiki/Web_developer" target='_blank' className='underline dark:font-bold'>Web developer</a>,</span></li>
