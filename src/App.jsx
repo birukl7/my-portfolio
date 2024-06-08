@@ -12,6 +12,8 @@ import Service from './pages/Service';
 import Cursor from './components/Cursor';
 import bgImage from '/images/body-images/bg-image-1.jpg';
 import CenterMode from './components/AdaptiveHeight';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faX } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -46,12 +48,17 @@ function App() {
     navBar.classList.add('-left-full')
   };
 
+  const closeUnderDev = (e)=>{
+    document.querySelector('#web').classList.add('hidden')
+  }
+
 
   return (
     <>
       {/* {!isTouchDevice && <Cursor />} */}
       {/* <Cursor /> */}
-      <section className=' '>
+      <section className=''>
+        <div className='fixed  p-4 right-4 rounded-lg  top-4  z-[50] bg-white dark:bg-gray-800 text-black dark:text-white flex items-center gap-x-5 shadow-xl' id='web'> <span className=''>The Website is Under Develpment</span><button onClick={closeUnderDev}><FontAwesomeIcon icon={faX}/></button> </div>
         <div>
           <Homey class={'text-slate-100 dark:text-slate-900'}/>
         </div>

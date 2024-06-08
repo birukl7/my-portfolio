@@ -75,9 +75,9 @@ function LandingPage() {
           <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-28 sm:-left-32 hidden sm:flex'} message={'Responsive Design'} width={'w-28'}/> */}
 
           <div className='mt-3 flex flex-col mx-auto'>
-            <h1 className='text-center sm:text-6xl text-4xl font-Truculenta font-extrabold '>Full-Stack Developer<span className='text-4xl'>👋</span></h1>
+            <h1 className='text-center sm:text-6xl text-4xl font-Truculenta font-extrabold '>Full-Stack Developer<span className='text-4xl animate-wiggle hover:cursor-pointer'>👋</span></h1>
             <div className='flex items-start justify-center '>
-              <p className=' my-4 md:text-xl font-Truculenta sm:w-[310px] align-middle  w-[250px]' style={{textAlign: 'center'}}> Hi, I'm Biruk Lemma. A passionate Full-Stack Laravel Developer based in Ethiopia, Addis Ababa 📍.</p>
+              <p className=' my-4 md:text-xl font-Truculenta sm:w-[310px] align-middle  w-[250px]' style={{textAlign: 'center'}}> Hi, I'm Biruk Lemma. A passionate Full-Stack Developer based in Ethiopia, Addis Ababa 📍.</p>
               <ul className='my-4 text-xl font-Truculenta dynamic-texts hidden'>
                 {/* <li><span className='js-text css-text w-[20px]'>&nbsp; Hi, I'm Stefan Topalovic. A passionate Front-end React Developer based in Belgrade, Serbia</span></li> */}
                 {/* <li><span className='js-text css-text'>&nbsp;a <a href="https://en.wikipedia.org/wiki/Web_developer" target='_blank' className='underline dark:font-bold'>Web developer</a>,</span></li>
@@ -88,11 +88,11 @@ function LandingPage() {
  
           </div>
           <ul className='flex justify-evenly sm:justify-around sm:my-5 my-4'>
-            <a href="https://github.com/birukl7"><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faGithub}/></a>
-            <a href="https://linkedin.com/in/biruk-lemma"><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faLinkedinIn}/></a>
-            <a href="https://twitter.com/biruk_777?t=ncFmziryKXbgwMzOcFuRxw&s=09"><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faTwitter}/></a>
-            <a href="https://wa.me/+251944055361"><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faWhatsapp}/></a>
-            <a href="https://t.me/birukl_777"><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faTelegram}/></a>
+            <a href="https://github.com/birukl7" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faGithub}/></a>
+            <a href="https://linkedin.com/in/biruk-lemma" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faLinkedinIn}/></a>
+            <a href="https://twitter.com/biruk_777?t=ncFmziryKXbgwMzOcFuRxw&s=09" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faTwitter}/></a>
+            <a href="https://wa.me/+251944055361" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faWhatsapp}/></a>
+            <a href="https://t.me/birukl_777" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faTelegram}/></a>
           </ul>
          
           <a href="#contact" className='bg-red-500 dark:text-white w-auto my-0 mx-auto px-7 py-2 font-semibold text-sm  rounded-full hover:bg-red-600 transition-all duration-300 ease-in-out sm:mt-1 mt-7'>
