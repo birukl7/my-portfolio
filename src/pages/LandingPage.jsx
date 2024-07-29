@@ -70,7 +70,7 @@ function LandingPage() {
 
           </div>
 
-          <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-0 sm:-right-28 hidden sm:flex'} message={'Emphasize on functionlaity'} width={'w-36 '}/>
+          {/* <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-0 sm:-right-28 hidden sm:flex'} message={'Emphasize on functionlaity'} width={'w-36 '}/> */}
           {/* <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-32 sm:-right-28 hidden sm:flex'} message={'Team Oriented'} width={'w-24'}/>
           <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-28 sm:-left-32 hidden sm:flex'} message={'Responsive Design'} width={'w-28'}/> */}
 

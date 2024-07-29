@@ -58,7 +58,7 @@ function App() {
       {/* {!isTouchDevice && <Cursor />} */}
       {/* <Cursor /> */}
       <section className=''>
-        <div className='fixed  p-4 right-4 rounded-lg  top-4  z-[50] bg-white dark:bg-gray-800 text-black dark:text-white flex items-center gap-x-5 shadow-xl max-w-[250px] sm:max-w-[100%] ' id='web'> <span className=''>The Website is Under Develpment</span><button onClick={closeUnderDev}><FontAwesomeIcon icon={faX}/></button> </div>
+        <div className='fixed  p-4 right-4 rounded-lg  top-4  z-[50] bg-white dark:bg-gray-800 text-black dark:text-white flex items-center gap-x-5 shadow-xl max-w-[250px] sm:max-w-[100%] ' id='web'> <span className='text-xs sm:text-[14px]'>The Website is Under Develpment</span><button onClick={closeUnderDev}><FontAwesomeIcon icon={faX}/></button> </div>
         <div>
           <Homey class={'text-slate-100 dark:text-slate-900'}/>
         </div>
