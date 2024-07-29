@@ -3,29 +3,6 @@ import  { useEffect, useState } from 'react'
 import myPicture from '/images/body-images/my-picture.svg' // The picture in the landing page
 import { faGithub, faLinkedinIn, faTelegram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
-/**
- * 
- * Shapes
- */
-import polygon1 from '/images/home-images/Polygon 1.svg'
-import polygon2 from '/images/home-images/Polygon 2.svg'
-import polygon3 from '/images/home-images/Vector 5.svg'
-import polygon4 from '/images/home-images/Vector 6.svg'
-import polygon5 from '/images/home-images/Vector 7.svg'
-import polygon6 from '/images/home-images/Vector 8.svg'
-import polygon7 from '/images/home-images/Vector 9.svg'
-import polygon8 from '/images/home-images/Vector 10.svg'
-import polygon9 from '/images/home-images/Vector 11.svg'
-import polygon10 from '/images/home-images/Vector 12.svg'
-
-/**
- * 
- * Images
- */
-import plus from '/images/home-images/plus.svg'
-import PlusCard from '../components/PlusCard'
-
-
 
 function LandingPage() {
   const [screenH, setScreenH] =useState(window.innerHeight)
@@ -40,29 +17,11 @@ function LandingPage() {
     }
   }, [])
 
-    // const textload=()=>{
-    //   setTimeout(()=>{
-    //     setText('UI/UX designer.')
-    //   }, 0);
-    //   setTimeout(()=>{
-    //     setText('enthusiast learner.')
-    //   }, 4000);
-    //   setTimeout(()=>{
-    //     setText('web developer.')
-    //   }, 8000);
-    // }
-
-    // textload()
-    // setInterval(textload, 12000);
-    // useEffect(()=>{
-    //   const textChange = document.querySelector('.js-text');
-    //   textChange.textContent = text; 
-    // },[text])
-
 
   return (
     <section className="mb-5 relative"  id='home'>
       {/* A div element to center a container */}
+      
       <div className='h-screen  flex justify-center flex-col relative items-center mx-auto'>
         <div className='flex flex-col items-centers relative justify-center mx-auto'>
           <div className='mx-auto bg-yellow-400 dark:bg-blue-400 relative sm:w-[370px] sm:h-[333px] overflow-hidden' id='landing-pic-container'>
@@ -70,19 +29,11 @@ function LandingPage() {
 
           </div>
 
-          {/* <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-0 sm:-right-28 hidden sm:flex'} message={'Emphasize on functionlaity'} width={'w-36 '}/> */}
-          {/* <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-32 sm:-right-28 hidden sm:flex'} message={'Team Oriented'} width={'w-24'}/>
-          <PlusCard image={plus} imageStyle={'w-3'} top={'sm:top-28 sm:-left-32 hidden sm:flex'} message={'Responsive Design'} width={'w-28'}/> */}
-
           <div className='mt-3 flex flex-col mx-auto'>
             <h1 className='text-center sm:text-6xl text-4xl font-Truculenta font-extrabold '>Full-Stack Developer<span className='text-4xl animate-wiggle hover:cursor-pointer'>👋</span></h1>
             <div className='flex items-start justify-center '>
               <p className=' my-4 md:text-xl font-Truculenta sm:w-[310px] align-middle  w-[250px]' style={{textAlign: 'center'}}> Hi, I'm Biruk Lemma. A passionate Full-Stack Developer based in Ethiopia, Addis Ababa 📍.</p>
               <ul className='my-4 text-xl font-Truculenta dynamic-texts hidden'>
-                {/* <li><span className='js-text css-text w-[20px]'>&nbsp; Hi, I'm Stefan Topalovic. A passionate Front-end React Developer based in Belgrade, Serbia</span></li> */}
-                {/* <li><span className='js-text css-text'>&nbsp;a <a href="https://en.wikipedia.org/wiki/Web_developer" target='_blank' className='underline dark:font-bold'>Web developer</a>,</span></li>
-                <li><span className='js-text css-text'>&nbsp; a <a href="" className='underline dark:font-bold'>UI/UX designer</a>.</span> </li> */}
-                 
               </ul>
             </div>
  
