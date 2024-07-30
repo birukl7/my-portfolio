@@ -52,7 +52,7 @@ function RecentWorks() {
                   title={project.name}
                   firstTech={project.firstTech}
                   secondTech={project.secondTech}
-                  description={project.description}
+                  description={project.descriptions[0]}
                   gitLink={project.githubLink}
                   category={project.catagory}
                   siteLink={project.siteLink}

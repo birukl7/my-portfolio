@@ -28,7 +28,7 @@ function WorkCard({ pics, title, siteLink, gitLink, description, readLink, first
 
       {/* Clamped text paragraph */}
       <p className='py-1 px-4 line-clamp-4'>
-        {description ? description : 'Link Building is a method SEO professionals use to generate backlinks that compel search engines to rank thier websited higher on search results LinkBuilders makes it easier for ...'}
+        {description ?  description : 'Link Building is a method SEO professionals use to generate backlinks that compel search engines to rank thier websited higher on search results LinkBuilders makes it easier for ...'}
       </p>
 
       <div className='flex justify-between gap-x-1 sm:gap-auto items-center px-4 py-3 mt-2'>
