@@ -3,12 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Technology from './Technology';
+import { Link } from 'react-router-dom';
 
-function WorkCard({ pic, title, siteLink, gitLink, description, readLink, firstTech = 'Node js', secondTech = 'Mongo DB', category }) {
+function WorkCard({ pics, title, siteLink, gitLink, description, readLink, firstTech = 'Node js', secondTech = 'Mongo DB', category }) {
   return (
     <div className='rounded-lg overflow-hidden bg-[#0b1e38] dark:bg-white dark:text-black transition-all duration-300 ease-in-out shadow-xl'>
       {/* Image container */}
-      <div className='h-60 w-full  bg-no-repeat  bg-center  bg-100% hover:bg-105% transition-all duration-150 ease-in-out' style={{backgroundImage: `url(${pic})`}}>
+      <div className='h-60 w-full  bg-no-repeat  bg-center  bg-100% hover:bg-105% transition-all duration-150 ease-in-out' style={{backgroundImage: `url(${pics[0]})`}}>
     </div>
 
     <div className='flex justify-start ml-4 gap-x-2 mt-3'>
@@ -32,9 +33,9 @@ function WorkCard({ pic, title, siteLink, gitLink, description, readLink, firstT
 
       <div className='flex justify-between gap-x-1 sm:gap-auto items-center px-4 py-3 mt-2'>
         <button className='bg-[#1688e6] p-2 rounded-md  hover:bg-transparent hover:outline hover:outline-1 font-bold w-36 sm:w-auto shadow-xl'>
-          <a href={readLink ? readLink : "#"} className='mr-2 flex items-center hover: transition-all duration-300 ease-linear text-white hover:dark:text-black rounded-full text-sm'>
+          <Link to={readLink ? readLink : "#"} className='mr-2 flex items-center hover: transition-all duration-300 ease-linear text-white hover:dark:text-black rounded-full text-sm'>
             Read More<FontAwesomeIcon icon={faArrowRight} className='ml-2' />
-          </a>
+          </Link>
         </button>
  
       </div>

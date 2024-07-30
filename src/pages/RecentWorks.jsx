@@ -49,13 +49,15 @@ function RecentWorks() {
               :
               filteredProjects.map((project, index) => (
                 <WorkCard
-                  pic={project.pic}
                   title={project.name}
                   firstTech={project.firstTech}
                   secondTech={project.secondTech}
                   description={project.description}
                   gitLink={project.githubLink}
                   category={project.catagory}
+                  siteLink={project.siteLink}
+                  readLink={project.readLink}
+                  pics={project.pics}
                   key={project.id}
                 />
               ))

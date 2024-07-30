@@ -2,21 +2,20 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Homey from './components/Homey';
 import AboutPage from './pages/AboutPage';
-import Clients from './pages/Clients';
 import Contact from './pages/Contact';
 import Experience from './pages/Experience';
 import Footer from './pages/Footer';
 import LandingPage from './pages/LandingPage';
 import RecentWorks from './pages/RecentWorks';
 import Service from './pages/Service';
-import Cursor from './components/Cursor';
-import bgImage from '/images/body-images/bg-image-1.jpg';
 import CenterMode from './components/AdaptiveHeight';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faX } from '@fortawesome/free-solid-svg-icons';
-import { Outlet } from 'react-router-dom';
+import { useTheme } from './components/ThemeContext';
 
 function App() {
+ 
+  const {theme, changeTheme, systemTheme}= useTheme()
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
@@ -60,7 +59,7 @@ function App() {
       <section className=''>
         <div className='fixed  p-4 right-4 rounded-lg  top-4  z-[50] bg-white dark:bg-gray-800 text-black dark:text-white flex items-center gap-x-5 shadow-xl max-w-[250px] sm:max-w-[100%] ' id='web'> <span className='text-xs sm:text-[14px]'>The Website is Under Develpment</span><button onClick={closeUnderDev}><FontAwesomeIcon icon={faX}/></button> </div>
         <div>
-          <Homey class={'text-slate-100 dark:text-slate-900'}/>
+          <Homey theme={theme} changeTheme={changeTheme} systemTheme={systemTheme} classes={'text-slate-100 dark:text-slate-900'}/>
         </div>
         
         <div className=' md:pl-custom-p'>
@@ -131,7 +130,7 @@ function App() {
 
           
         </div>
-
+    {/* <Outlet /> */}
       </section>
     </>
   );

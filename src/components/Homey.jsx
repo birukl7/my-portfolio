@@ -5,12 +5,18 @@ import { faGithub, faLinkedin, faLinkedinIn, faTelegram } from '@fortawesome/fre
 
 import profilePictureDark from '/images/home-images/logo.png';
 import profilePictureLight from '/images/home-images/logo-dark.png';
+import { Link, useLocation } from 'react-router-dom';
+import { useTheme } from './ThemeContext';
 
-function Homey(props) {
-  const [theme, setTheme] = useState('light'); // changed here light->DARK
+
+function Homey({ classes }) {
+
+  const { theme, changeTheme, systemTheme } = useTheme();
   const [dropDown, setDropDown] = useState(false);
   const [currentSection, setCurrentSection] = useState('home');
   const dropdownRef = useRef(null);
+  const location = useLocation();
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,23 +40,15 @@ function Homey(props) {
     };
   }, []);
 
+
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
-  }, [theme]);
-
-  const changeTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
-
-  const systemTheme = () => {
-    const darkQuery = !window.matchMedia('(prefers-color-scheme: light)').matches; //changed here !
-    setTheme(darkQuery ? 'light' : 'dark');
-    setDropDown(false);
-  };
+  }, [location]);
 
   const toggleMobileNav = () => {
     const navBar = document.querySelector('#nav-bar');
@@ -61,27 +59,21 @@ function Homey(props) {
     hamburger.classList.toggle('after:-translate-y-2')
     hamburger.classList.toggle('before:-rotate-45')
     hamburger.classList.toggle('before:translate-y-3')
-
-    // navBar.classList.toggle('p-5');
     navBar.classList.toggle('left-0')
     navBar.classList.toggle('-left-full')
-    // navBar.classList.toggle('w-80');
-    // navBar.classList.toggle('w-0');
   };
 
   const navLinks = [
-    { href: '#home', text: 'Home', icon: faHome },
-    { href: '#about', text: 'About', icon: faUser},
-    { href: '#works', text: 'Works', icon: faSuitcase },
-    { href: '#service', text: 'Service', icon: faChartSimple },
-    { href: '#expert', text: 'Experience' , icon: faCubesStacked},
-
-    // { href: '#blog', text: 'Blog', icon: faFeather },
-    { href: '#contact', text: 'Contact', icon: faAddressCard }
+    { href: '/#home', text: 'Home', icon: faHome },
+    { href: '/#about', text: 'About', icon: faUser},
+    { href: '/#works', text: 'Works', icon: faSuitcase },
+    { href: '/#service', text: 'Service', icon: faChartSimple },
+    { href: '/#expert', text: 'Experience' , icon: faCubesStacked},
+    { href: '/#contact', text: 'Contact', icon: faAddressCard }
   ];
 
   return (
-    <div className = {`bg-dark-blue-1 dark:bg-slate-200  ${props.class}`}>
+    <div className = {`bg-dark-blue-1 dark:bg-slate-200 ${classes}`}>
       <header className='text-md md:text-xl font-semibold p-2 fixed w-full   my-0 mx-auto bg-blue-black dark:bg-slate-100 md:bg-transparent md:dark:bg-transparent
        z-10'>
         <div className='flex justify-between items-center'>
@@ -98,7 +90,7 @@ function Homey(props) {
            md:pt-5 md:pl-3 md:mt-20'>
             {navLinks.map(navLink => (
               <li key={navLink.href} className='mb-5 w-full md:mr-3'>
-                <a href={navLink.href} className={`px-7 py-1 rounded-md hover:bg-slate-600 md:hover:bg-transparent dark:hover:bg-transparent transition ease-in-out duration-300 dark:hover:outline dark:hover:outline-1 hover:outline hover:outline-1 hover:outline-slate-200 dark:hover:outline-slate-900 hover:dark:bg-slate-200 ${navLink.href === `#${currentSection}` ? 'active-link' : ''}`} onClick={toggleMobileNav}>
+                <a href={navLink.href} className={`px-7 py-1 rounded-md hover:bg-slate-600 md:hover:bg-transparent dark:hover:bg-transparent transition ease-in-out duration-300 dark:hover:outline dark:hover:outline-1 hover:outline hover:outline-1 hover:outline-slate-200 dark:hover:outline-slate-900 hover:dark:bg-slate-200 ${navLink.href === `/#${currentSection}` ? 'active-link' : ''}`} onClick={toggleMobileNav}>
                   <FontAwesomeIcon className='mr-3 ' icon={navLink.icon} />
                   {navLink.text}
                 </a>
@@ -126,6 +118,7 @@ function Homey(props) {
                   <button onClick={() => setDropDown(!dropDown)}>
                     <FontAwesomeIcon icon={faMoon} className='mr-2' /> <span className='sm:hidden mg:inline-block'>{''}</span> <FontAwesomeIcon icon={dropDown ? faCaretUp : faCaretDown} className=' sm:hidden mg:inline-block' />
                   </button>}
+
                 <div className={!dropDown ? 'hidden' : 'absolute flex flex-col bg-white text-black dark:text-slate-200 bottom-10 w-32 p-3 rounded-xl left-0 dark:border dark:w-36 outline outline-1 dark:outline-slate-800  md:-mb-36 md:text-sm'}>
                   <button title='Light theme' onClick={() => { changeTheme(); setDropDown(false); }} className='border-b-1 hover:bg-slate-200 bg-slate-100 dark:text-black rounded-md border-slate-200 py-1 px-3 mb-2 outline outline-1 dark:outline dark:outline-1'>
                     {theme === 'dark' ? <DropDownBtn icon={faMoon} text={'Dark'} iconClass={'mr-4'} /> : <DropDownBtn icon={faLightbulb} text={'Light'} iconClass={'mr-4'} />}

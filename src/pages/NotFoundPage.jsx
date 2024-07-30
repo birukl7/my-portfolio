@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function NotFoundPage() {
+function NotFoundPage({work}) {
   return (
-<section class="dark:bg-white bg-gray-900 h-screen flex items-center justify-center">
+<section class="dark:bg-white bg-gray-900 h-screen flex items-center justify-center font-Truculenta">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-sm text-center">
             <h1 class="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl dark:text-primary-600 text-primary-500">404</h1>
