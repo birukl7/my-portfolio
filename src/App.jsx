@@ -94,12 +94,11 @@ function App() {
             
 
             
-            <div className='text-slate-100 dark:text-slate-900 '>
+            {/* <div className='text-slate-100 dark:text-slate-900 '>
               <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
-                {/* <Clients /> */}
                 <CenterMode />
               </div>
-            </div>
+            </div> */}
 
             <div className='text-slate-100 dark:text-slate-900 '>
               <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
