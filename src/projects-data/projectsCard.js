@@ -21,6 +21,13 @@ import spaceInvaders3 from '/images/body-images/space-invaders/space-invaders-3.
 import spaceInvaders4 from '/images/body-images/space-invaders/space-invaders-4.png'
 import spaceInvaders5 from '/images/body-images/space-invaders/space-invaders-5.png'
 
+import myPortfolio1 from '/images/body-images/my-portfolio/my-portfolio1.png'
+import myPortfolio2 from '/images/body-images/my-portfolio/my-portfolio2.png'
+import myPortfolio3 from '/images/body-images/my-portfolio/my-portfolio3.png'
+import myPortfolio4 from '/images/body-images/my-portfolio/my-portfolio4.png'
+import myPortfolio5 from '/images/body-images/my-portfolio/my-portfolio5.png'
+import myPortfolio6 from '/images/body-images/my-portfolio/my-portfolio6.png'
+import myPortfolio7 from '/images/body-images/my-portfolio/my-portfolio7.png'
 
 
 
@@ -71,7 +78,7 @@ const projects = [
     catagory: ['Frontend']
   },{
     id:4,
-    pics: [],
+    pics: [myPortfolio3, myPortfolio1, myPortfolio2, myPortfolio4, myPortfolio5, myPortfolio6, myPortfolio7],
     name: 'My Portfolio',
     firstTech: 'React Js',
     secondTech: 'Tailwind ',

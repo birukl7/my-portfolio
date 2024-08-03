@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import SectionTitle from '../components/SectionTitle';
-import Input from '../components/Input';
 import PrimaryButton from '../components/PrimaryButton';
 import emailjs from '@emailjs/browser';
 
@@ -48,13 +47,13 @@ function Contact() {
     <section id='contact' className='mt-20'>
       <SectionTitle text={'Get In Touch'} />
       <div className='flex md:flex-row flex-col justify-between max-w-6xl mx-auto'>
-        <div className='w-full'>
+        <div className=''>
           <p>Let's talk about everything!</p>
           <p>Don't like forms? Send me an <a href='mailto:contact@biruklemma.com' target='_blank' className='text-red-500'>email</a>✨</p>
         </div>
 
         <form ref={formRef} onSubmit={sendEmail}>
-          <div className='md:w-full md:mt-0 mt-6'>
+          <div className='md:w-full md:mt-0 mt-6 w-full'>
             <div className='flex gap-x-2 flex-col sm:flex-row pl-3 pr-0 gap-y-3'>
               <input
                 type='text'
@@ -73,6 +72,7 @@ function Contact() {
                 onChange={handleChange}
               />
             </div>
+            
             <div className='flex flex-col gap-y-3 mt-3'>
               <div className='px-3 w-full'>
                 <input
