@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAddressCard, faCaretDown, faCaretUp, faChartSimple, faComputer, faCubesStacked, faDesktop, faFeather, faHome, faLightbulb, faMoon, faPerson, faSuitcase, faUser } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin, faLinkedinIn, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { faAddressCard, faCaretDown, faCaretUp, faChartSimple, faComputer, faCubesStacked, faHome, faLightbulb, faMoon, faSuitcase, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedinIn, faTelegram } from '@fortawesome/free-brands-svg-icons';
 
 import profilePictureDark from '/images/home-images/logo.png';
 import profilePictureLight from '/images/home-images/logo-dark.png';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useTheme } from './ThemeContext';
 
 
-function Homey({ classes }) {
+function HomeNavBar({ classes }) {
 
   const { theme, changeTheme, systemTheme } = useTheme();
   const [dropDown, setDropDown] = useState(false);
@@ -150,5 +150,5 @@ const DropDownBtn = (props) => {
   )
 }
 
-export default Homey;
+export default HomeNavBar;
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Homey from './components/Homey';
+
 import AboutPage from './pages/AboutPage';
 import Contact from './pages/Contact';
 import Experience from './pages/Experience';
@@ -8,10 +8,8 @@ import Footer from './pages/Footer';
 import LandingPage from './pages/LandingPage';
 import RecentWorks from './pages/RecentWorks';
 import Service from './pages/Service';
-import CenterMode from './components/AdaptiveHeight';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faX } from '@fortawesome/free-solid-svg-icons';
 import { useTheme } from './components/ThemeContext';
+import HomeNavBar from './components/homeNavBar';
 
 function App() {
  
@@ -40,10 +38,6 @@ function App() {
     hamburger.classList.remove('after:-translate-y-2')
     hamburger.classList.remove('before:-rotate-45')
     hamburger.classList.remove('before:translate-y-3')
-
-    // navBar.classList.remove('p-5');
-    // navBar.classList.remove('w-80');
-    // navBar.classList.add('w-0');
     navBar.classList.remove('left-0')
     navBar.classList.add('-left-full')
   };
@@ -59,7 +53,7 @@ function App() {
       <section className=''>
         {/* <div className='fixed  p-4 right-4 rounded-lg  top-4  z-[50] bg-white dark:bg-gray-800 text-black dark:text-white flex items-center gap-x-5 shadow-xl max-w-[250px] sm:max-w-[100%] ' id='web'> <span className='text-xs sm:text-[14px]'>The Website is Under Develpment</span><button onClick={closeUnderDev}><FontAwesomeIcon icon={faX}/></button> </div> */}
         <div>
-          <Homey theme={theme} changeTheme={changeTheme} systemTheme={systemTheme} classes={'text-slate-100 dark:text-slate-900'}/>
+          <HomeNavBar theme={theme} changeTheme={changeTheme} systemTheme={systemTheme} classes={'text-slate-100 dark:text-slate-900'}/>
         </div>
         
         <div className=' cs:pl-custom-p'>
@@ -121,7 +115,6 @@ function App() {
 
           
         </div>
-    {/* <Outlet /> */}
       </section>
     </>
   );

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Homey from '../components/Homey'
+import Homey from '../components/homeNavBar'
 import Footer from './Footer'
 import Contact from './Contact';
 import projects from '../projects-data/projectsCard'
