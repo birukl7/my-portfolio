@@ -23,6 +23,7 @@ import spaceInvaders5 from '/images/body-images/space-invaders/space-invaders-5.
 
 
 
+
 const projects = [
   {
     id: 1,
@@ -79,7 +80,7 @@ const projects = [
     siteLink: 'https://biruklemma.com',
     githubLink: '',
     readLink: '/works/4',
-    catagory: ['Frontend']
+    catagory: ['Frontend', 'UI/UX'],
   }
   ]
 
