@@ -1,0 +1,15 @@
+# Allow all crawlers full access
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /login/
+
+# Sitemap URL
+Sitemap: https://biruklemma.com/sitemap.xml
+
+# Allow specific bots
+User-agent: Googlebot
+Disallow: /private/secret.html
+
+User-agent: Bingbot
+Disallow: /private/
