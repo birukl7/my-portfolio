@@ -39,15 +39,27 @@ export default {
       margin:{
         'custom-m': '315px'
       },
+
       keyframes: {
         wiggle: {
           '0%, 100%': { transform: 'rotate(0deg)' },
           '50%': { transform: 'rotate(360deg)' },
         },
+        toRight:{
+          'from' :{
+            transform: 'translateY(300px)',
+            opacity: '0' 
+          },
+          'to':{
+            transform: 'translateY(0px)',
+            opacity: '1'
+          }
+        }
 
       },
       animation: {
         wiggle: 'wiggle 30s ease-in-out infinite',
+        toRight: 'toRight 1s ease-in-out forwards'
       }
     },
     screens:{
@@ -65,6 +77,7 @@ export default {
       '140%': '140%',
       '150%': '150%'
     },
+
 
     // height:{
     //   'custom':'72px',

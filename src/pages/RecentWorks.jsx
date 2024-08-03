@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import SecondaryBtn from '../components/SecondaryBtn';
 import WorkCard from '../components/WorkCard';
 import SectionTitle from '../components/SectionTitle';
@@ -7,9 +7,7 @@ import sorryImage from '/images/body-images/sorry.png'
 
 function RecentWorks() {
   const [filteredProjects, setFilteredProjects] = useState(projects);
-
   const [selectedFilter, setSelectedFilter] = useState("Everything");
-
   const filters = ["Everything", 'UI/UX', 'Frontend', 'Backend', 'Database'];
 
   const handleOnClick = (buttonValue) => {
@@ -48,7 +46,7 @@ function RecentWorks() {
                 </p></div> 
               :
               filteredProjects.map((project, index) => (
-                <WorkCard
+                <WorkCard 
                   title={project.name}
                   firstTech={project.firstTech}
                   secondTech={project.secondTech}
