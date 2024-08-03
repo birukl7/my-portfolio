@@ -10,8 +10,8 @@ function Experience() {
    
       <section className='pt-12 ' id='expert'>
 
-      <SectionTitle text={'Experience'} classes = {'sm:-ml-32'}/>
-      <div className='grid sm:grid-cols-2 gap-x-3 gap-y-3 pb-20 max-w-5xl'>
+      <SectionTitle text={'Experience'} classes = {''}/>
+      <div className='grid cs:grid-cols-2 gap-x-3 gap-y-3 pb-20 max-w-5xl'>
 
         <ul id='education' className='bg-slate-800 dark:bg-white p-3 rounded-2xl shadow-lg shadow-slate-700'> 
           <ExperienceCard description={'Lideta Catholic Cathedral School'}/>

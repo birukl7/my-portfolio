@@ -74,22 +74,22 @@ function Homey({ classes }) {
 
   return (
     <div className = {`bg-dark-blue-1 dark:bg-slate-200 ${classes}`}>
-      <header className='text-md md:text-xl font-semibold p-2 fixed w-full   my-0 mx-auto bg-blue-black dark:bg-slate-100 md:bg-transparent md:dark:bg-transparent
+      <header className='text-md cs:text-xl font-semibold py-3 px-6 fixed w-full   my-0 mx-auto bg-blue-black dark:bg-slate-100 cs:bg-transparent cs:dark:bg-transparent
        z-10'>
         <div className='flex justify-between items-center'>
           <img className='w-20 md:mt-3 ml-2 sm:ml-0 md:z-50 md:pl-10 md:w-32' src={theme === 'dark' ? profilePictureLight : profilePictureDark} alt="" />
           
           <div className='w-7 h-1 mr-1 bg-slate-100 dark:bg-slate-900 rounded-full relative after:bg-slate-100 after:dark:bg-slate-900 after:block after:w-full after:absolute after:top-2 after:h-1 after:rounded-full 
            before:bg-slate-100 before:dark:bg-slate-900 before:block before:w-full before:absolute before:bottom-2 before:h-1 before:rounded-full cursor-pointer before:transition-all  before:ease-in-out before:duration-200 after:transition-all after:ease-in-out after:duration-200 
-           md:hidden' onClick={toggleMobileNav} id='hamburger'></div>
+           cs:hidden' onClick={toggleMobileNav} id='hamburger'></div>
         </div>
 
-        <nav className='fixed h-screen top-0 -bottom-40 -left-full right-24 transition-left ease-in-out duration-500 p-5 overflow-hidden  bg-dark-blue-1  backdrop-blur-3xl  dark:bg-slate-300 flex flex-col  justify-between items-center w-80 text-sm md:text-lg font-light dark:font-semibold
-         md:top-0 md:w-custom-w md:bottom-0 md:left-0 z-50 md:z-40  md:justify-evenly' id='nav-bar'>
+        <nav className='fixed top-0 bottom-0 h-screen -left-full cs:right-24 sm:right-16 transition-left ease-in-out duration-500 p-5 overflow-hidden  bg-dark-blue-1  backdrop-blur-3xl  dark:bg-slate-300 flex flex-col  justify-between items-center w-80 text-sm md:text-lg font-light dark:font-semibold 
+         cs:top-0 cs:w-custom-w cs:bottom-0 cs:left-0 z-50 cs:z-40  cs:justify-evenly' id='nav-bar'>
           <ul className='flex flex-col items-center justify-between pt-7
-           md:pt-5 md:pl-3 md:mt-20'>
+           cs:pt-5 cs:pl-3 cs:mt-20'>
             {navLinks.map(navLink => (
-              <li key={navLink.href} className='mb-5 w-full md:mr-3'>
+              <li key={navLink.href} className='mb-5 w-full cs:mr-3'>
                 <a href={navLink.href} className={`px-7 py-1 rounded-md hover:bg-slate-600 md:hover:bg-transparent dark:hover:bg-transparent transition ease-in-out duration-300 dark:hover:outline dark:hover:outline-1 hover:outline hover:outline-1 hover:outline-slate-200 dark:hover:outline-slate-900 hover:dark:bg-slate-200 ${navLink.href === `/#${currentSection}` ? 'active-link' : ''}`} onClick={toggleMobileNav}>
                   <FontAwesomeIcon className='mr-3 ' icon={navLink.icon} />
                   {navLink.text}
@@ -97,7 +97,7 @@ function Homey({ classes }) {
               </li>
             ))}
           </ul>
-          <ul className='w-full -mt-8  md:hidden'>
+          <ul className='w-full -mt-8 cs:hidden'>
             <li><hr className='w-28 my-0 mx-auto mb-2 bg-slate-800 h-0.5' /></li>
             <ul className='flex justify-center gap-5 text-xl'>
               <a href="https://github.com/birukl7" className='hover:text-yellow-300 dark:hover:text-red-400 transition ease-in-out duration-300'><li><FontAwesomeIcon icon={faGithub} /></li></a>

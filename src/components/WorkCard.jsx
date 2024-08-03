@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 function WorkCard({ pics, title, siteLink, gitLink, description, readLink, firstTech = 'Node js', secondTech = 'Mongo DB', category }) {
   return (
-    <div className='rounded-lg overflow-hidden bg-[#0b1e38] dark:bg-white dark:text-black transition-all duration-300 ease-in-out shadow-xl'>
+    <div className='rounded-lg overflow-hidden bg-[#0b1e38] dark:bg-white dark:text-black transition-all duration-300 ease-in-out shadow-xl outline outline-[1px] '>
       {/* Image container */}
-      <div className='h-60 w-full  bg-no-repeat  bg-center  bg-100% hover:bg-105% transition-all duration-150 ease-in-out' style={{backgroundImage: `url(${pics[0]})`}}>
+      <div className='h-60 w-full bg-no-repeat bg-center bg-cover hover:bg-105% transition-all duration-150 ease-in-out border-b-[1px] mb-6 border-black rounded-[10px]' style={{backgroundImage: `url(${pics[0]})`}}>
     </div>
 
     <div className='flex justify-start ml-4 gap-x-2 mt-3'>

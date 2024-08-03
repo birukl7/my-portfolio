@@ -62,19 +62,20 @@ function App() {
           <Homey theme={theme} changeTheme={changeTheme} systemTheme={systemTheme} classes={'text-slate-100 dark:text-slate-900'}/>
         </div>
         
-        <div className=' md:pl-custom-p'>
+        <div className=' cs:pl-custom-p'>
           <main className='-z-20  ' onClick={toggleMobileNav}>
 
             <div className='max-w-screen-xl my-0 mx-auto w-11/12 text-slate-100 dark:text-slate-900' >
             <LandingPage />
             </div>
             
-            <div className=' bg-slate-200 dark:bg-slate-100 text-slate-900 dark:text-slate-900 md:h-screen' >
+            <div className=' bg-slate-200 dark:bg-slate-100 text-slate-900 dark:text-slate-900 pb-32' >
               <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
                 <AboutPage />
               </div>
             </div>
-            <div className='text-slate-100 dark:text-slate-900 '>
+
+            <div className='text-slate-100 dark:text-slate-900 mt-16'>
               <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
                 <RecentWorks />
               </div>
@@ -87,7 +88,7 @@ function App() {
             </div>
             
             <section className='text-slate-100 dark:text-slate-900 ' >
-              <div className='max-w-screen-xl my-0 mx-auto w-11/12 md:h-screen flex justify-center items-center'>
+              <div className='max-w-screen-xl my-0 mx-auto w-11/12 cs:h-screen flex justify-center items-center'>
                 <Experience />
               </div>
             </section>

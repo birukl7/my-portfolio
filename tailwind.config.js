@@ -11,6 +11,9 @@ export default {
       backgroundImage: theme => ({
         'image': `url(/images/body-images/bg-image-1.jpg)`,
       }),
+      screens:{
+        'cs': '1096px',
+      },
       colors:{
         'blue-black' : '#020024',
         'dark-blue-1': '#302F4E',
