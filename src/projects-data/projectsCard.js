@@ -15,6 +15,12 @@ import mallin4 from '/images/body-images/mall-in/mall-in-4.png'
 import mallin5 from '/images/body-images/mall-in/mall-in-5.png'
 import mallin6 from '/images/body-images/mall-in/mall-in-6.png'
 
+import spaceInvaders1 from '/images/body-images/space-invaders/space-invaders-1.png'
+import spaceInvaders2 from '/images/body-images/space-invaders/space-invaders-2.png'
+import spaceInvaders3 from '/images/body-images/space-invaders/space-invaders-3.png'
+import spaceInvaders4 from '/images/body-images/space-invaders/space-invaders-4.png'
+import spaceInvaders5 from '/images/body-images/space-invaders/space-invaders-5.png'
+
 
 
 const projects = [
@@ -26,12 +32,12 @@ const projects = [
     secondTech: 'Blade',
     tags: ["mental health", "college students", "health consultations"],
     descriptions: [
-      'Health Guard is a groundbreaking mental health platform meticulously crafted to support college students grappling with mental health challenges. Developed using Laravel and Blade templating, this comprehensive solution addresses critical issues by offering a wide array of resources and services tailored to the unique needs of its users. The platform facilitates live chats and consultations with health professionals, ensuring students have direct access to expert advice and support. Additionally, Health Guard features interactive quizzes designed to engage users and help them assess their mental well-being, alongside a wealth of informative blogs and a robust FAQ section to provide further guidance and information. A standout component of the platform is its progress tracking system, which utilizes circular progress bars to help users visually monitor their mental health journey and track their improvements over time.',
+      'Health Guard is a mental health platform meticulously crafted to support college students grappling with mental health challenges. Developed using Laravel and Blade templating, this comprehensive solution addresses critical issues by offering a wide array of resources and services tailored to the unique needs of its users. The platform facilitates live chats and consultations with health professionals, ensuring students have direct access to expert advice and support. Additionally, Health Guard features interactive quizzes designed to engage users and help them assess their mental well-being.',
       ' The project, which earned 4th place in a university hackathon, reflects a deep commitment to leveraging technology for social good and underscores the importance of accessible mental health resources in academic settings. By integrating these features into a user-friendly interface, Health Guard not only enhances students\' ability to manage their mental health but also promotes a culture of well-being and support within the college community.'],
     githubLink: 'https://github.com/birukl7/health-guard',
     siteLink: 'https://healthguard.biruklemma.com',
     readLink: '/works/1',
-    catagory: ['Frontend', 'Backend', 'Database'],
+    catagory: ['Frontend', 'Backend', 'Database', 'UI/UX'],
 
   },   
   {
@@ -46,21 +52,35 @@ const projects = [
     ' By integrating features such as interactive maps and real-time updates on store offerings, Mall In aims to streamline the shopping journey and make it more efficient for users. The project showcases advanced front-end development skills, leveraging React\'s powerful capabilities to build a dynamic and responsive application. Mall In not only helps users find what they need but also supports mall businesses by providing them with a digital presence and a platform to reach potential customers more effectively. This project exemplifies a thoughtful approach to solving real-world problems through technology, combining user-centric design with functional features to create a valuable tool for both shoppers and retailers.'
     ],
     githubLink: 'https://github.com/birukl7/mall-in',
+    siteLink: 'https://addismall.biruklemma.com',
     readLink: '/works/2',
-    catagory: ['Frontend','database', 'backend']
+    catagory: ['Frontend','Database', 'Backend','UI/UX']
   },
   {
     id: 3,
-    pics: [spaceInvaders],
+    pics: [spaceInvaders,spaceInvaders1,spaceInvaders2,spaceInvaders3,spaceInvaders4,spaceInvaders5],
     name: 'Space Invaders',
-    firstTech: 'Vanila JS',
-    secondTech: 'css',
+    firstTech: 'Vanilla JS',
+    secondTech: 'CSS',
     tags: ["Canva", "Game"],
-    descriptions: ['Health Guard is a web application that is for college students who are suffering depression and pychological problems, connects them with health professionals. it is built by laravel usign blade templating engine.'],
+    descriptions: ['Space Invaders is a classic arcade game recreated using Vanilla JS and CSS. Players control a spaceship and must defend the planet by shooting down waves of alien invaders. Use keys A and D to move left and right and the SPACE key to shoot. The game is best experienced on large screens.'],
+    siteLink: 'https://birukl7.github.io/space-invaders/',
     githubLink: 'https://github.com/birukl7/health-guard',
     readLink: '/works/3',
     catagory: ['Frontend']
-  },
-]
+  },{
+    id:4,
+    pics: [],
+    name: 'My Portfolio',
+    firstTech: 'React Js',
+    secondTech: 'Tailwind ',
+    tags: ["Portfolio","React Js", "Files"],
+    descriptions: [''],
+    siteLink: 'https://biruklemma.com',
+    githubLink: '',
+    readLink: '/works/4',
+    catagory: ['Frontend']
+  }
+  ]
 
 export default projects

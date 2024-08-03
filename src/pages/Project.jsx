@@ -19,6 +19,7 @@ function Project() {
   const project = projects.find((project) => project.id === projectId);
   const location = useLocation();
 
+  // console.log()
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
@@ -47,12 +48,11 @@ function Project() {
           <div className='px-8'>
             <SectionTitle text={project.name} />
             <div className='flex flex-col gap-y-5'>
-              <p className='max-w-[900px]'><span className='font-semibold underline'>{project.name}</span> {project.descriptions[0]}</p>
-              <p className='max-w-[900px]'> {project.descriptions[1]}</p>
+              <p className='max-w-[900px]'><a href={project.siteLink} target='_blank' className='font-semibold underline'>{project.name}</a> {project.descriptions[0].split(' ').slice(2).join(' ')}</p>
             </div>
 
             <div>
-              <div className='p-5 flex gap-x-4 flex-wrap'>
+              <div className='p-5 flex gap-x-4 flex-wrap gap-y-2'>
                 <Technology text={project.firstTech} class={'p-2 px-4 text-[15px] bg-white text-black capitalize'} />  
                 <Technology text={project.secondTech} class={'p-2 px-4 text-[15px] bg-white text-black capitalize'} />
                 {

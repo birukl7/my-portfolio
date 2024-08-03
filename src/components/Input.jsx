@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Input(props) {
+function Input({placeholder, classes, name, change}) {
   return (
     <>
-      <input type="text" name="name" id="" placeholder={!props.placeholder? 'Your name' : props.placeholder} className={` rounded-full p-4 py-3 pl-7 focus:outline-blue-400 focus:ring-0 focus:outline-1 text-black  ${props.class}`} />
+      <input type="text" name={name} id="" placeholder={!placeholder? 'Your name' : placeholder} className={` focus:ring-0 rounded-full p-4 py-3 pl-7 text-black  ${classes}`} onChange={change} />
     </>
   )
 }

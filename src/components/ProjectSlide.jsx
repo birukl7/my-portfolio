@@ -49,7 +49,7 @@ function ProjectSlide({pics}) {
       {
         pics.map(pic => (
           <div className="p-5">
-              <div style={{backgroundImage: `url(${pic})`}} className='w-full h-[500px] rounded-[10px] outline outline-1 bg-center bg-cover'></div>
+              <div style={{backgroundImage: `url(${pic})`}} className='w-full h-[500px] rounded-[10px] outline outline-1 bg-top bg-cover'></div>
           </div>
         ))
       }

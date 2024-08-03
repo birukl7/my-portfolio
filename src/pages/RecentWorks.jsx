@@ -10,7 +10,7 @@ function RecentWorks() {
 
   const [selectedFilter, setSelectedFilter] = useState("Everything");
 
-  const filters = ["Everything", 'UI/UX', 'Frontend', 'Backend', 'Database', 'Mobile App'];
+  const filters = ["Everything", 'UI/UX', 'Frontend', 'Backend', 'Database'];
 
   const handleOnClick = (buttonValue) => {
     if (buttonValue === 'Everything') {
