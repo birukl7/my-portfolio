@@ -11,18 +11,42 @@ function Contact() {
     message: ''
   });
 
+  const [errors, setErrors] = useState({});
+
   const formRef = useRef();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const validate = () => {
+    const errors = {};
+
+    if (!formData.name.trim()) {
+      errors.name = 'Name is required';
+    }
+
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = 'Email address is invalid';
+    }
+
+    if (!formData.message.trim()) {
+      errors.message = 'Message is required';
+    }
+
+    return errors;
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log("Service ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
-    console.log("Template ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-    console.log("User ID:", import.meta.env.VITE_EMAILJS_USER_ID);
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
 
     emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -45,6 +69,7 @@ function Contact() {
       subject: '',
       message: '',
     });
+    setErrors({});
   };
 
   return (
@@ -59,24 +84,31 @@ function Contact() {
         <form ref={formRef} onSubmit={sendEmail}>
           <div className='md:w-full md:mt-0 mt-6 w-full'>
             <div className='flex gap-x-2 flex-col sm:flex-row pl-3 pr-0 gap-y-3'>
-              <input
-                type='text'
-                placeholder='Your name'
-                className='w-full md:mb-0 mb-3 shadow-lg rounded-full p-4 py-3 pl-7 text-black'
-                name='name'
-                value={formData.name}
-                onChange={handleChange}
-              />
-              <input
-                type='email'
-                placeholder='Your Email'
-                className='w-full md:mb-0 mb-3 shadow-lg rounded-full p-4 py-3 pl-7 text-black'
-                name='email'
-                value={formData.email}
-                onChange={handleChange}
-              />
+              <div>
+                <input
+                  type='text'
+                  placeholder='Your name *'
+                  className='w-full md:mb-0 mb-3 shadow-lg rounded-full p-4 py-3 pl-7 text-black'
+                  name='name'
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                {errors.name && <p className='text-red-500 pl-5  text-xs'>{errors.name}</p>}
+              </div>
+
+              <div>
+                <input
+                  type='email'
+                  placeholder='Your Email *'
+                  className='w-full md:mb-0 mb-3 shadow-lg rounded-full p-4 py-3 pl-7 text-black'
+                  name='email'
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                {errors.email && <p className='text-red-500 pl-5  text-xs'>{errors.email}</p>}
+              </div>
             </div>
-            
+
             <div className='flex flex-col gap-y-3 mt-3'>
               <div className='px-3 w-full'>
                 <input
@@ -88,16 +120,19 @@ function Contact() {
                   onChange={handleChange}
                 />
               </div>
-              
-              <textarea
-                name='message'
-                cols='30'
-                rows='10'
-                className='p-5 m-4 mt-0 rounded-md focus:outline-1 focus:outline-blue-400 text-black font-semibold shadow-lg'
-                placeholder='Message'
-                value={formData.message}
-                onChange={handleChange}
-              ></textarea>
+
+              <div className='w-full flex flex-col'>
+                <textarea
+                  name='message'
+                  cols='30'
+                  rows='10'
+                  className='p-5 m-4 mt-0 rounded-md focus:outline-1 focus:outline-blue-400 text-black font-semibold shadow-lg'
+                  placeholder='Message *'
+                  value={formData.message}
+                  onChange={handleChange}
+                ></textarea>
+                {errors.message && <p className='text-red-500 pl-5 text-xs'>{errors.message}</p>}
+              </div>
               <PrimaryButton text={'Send Message'} type='submit' />
             </div>
           </div>
