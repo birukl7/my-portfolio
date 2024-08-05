@@ -64,7 +64,7 @@ function ProjectSlide({ pics }) {
               {!loadedImages[index] ? (
                 <Skeleton className='w-full h-[500px] rounded-[10px]' />
               ) : (
-                <div style={{ backgroundImage: `url(${pic})` }} className='w-full h-[500px] rounded-[10px] outline outline-1 bg-top bg-cover'></div>
+                <div style={{ backgroundImage: `url(${pic})` }} className='w-full h-[500px] rounded-[10px] outline outline-1 sm:bg-top bg-left bg-cover'></div>
               )}
             </div>
           ))}

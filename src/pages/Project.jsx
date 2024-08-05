@@ -11,6 +11,9 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Link, ScrollRestoration, useLocation, useParams } from 'react-router-dom'
 import NotFoundPage from './NotFoundPage';
 import ProjectSlide from '../components/ProjectSlide';
+import "@theme-toggles/react/css/Expand.css"
+import { Expand } from "@theme-toggles/react"
+import { useTheme } from '../components/ThemeContext';
 
 
 function Project() {
@@ -18,6 +21,7 @@ function Project() {
   const projectId = parseInt(id, 10); // Convert the id from string to number
   const project = projects.find((project) => project.id === projectId);
   const location = useLocation();
+  const { theme, changeTheme } = useTheme();
 
   // console.log()
   useEffect(() => {
@@ -33,10 +37,14 @@ function Project() {
     <div className='max-w-[1100px] mx-auto pt-10 text-slate-100 dark:text-slate-900 pb-10' id='' >
 
       <div>
-        <div className=' p-4 outline-1 fixed right-0 left-0 top-0 mb-6 z-[100] bg-[#020024AA]  dark:bg-slate-200 backdrop-blur-[100px]'>
+        <div className=' px-4 py-1 sm:p-4 outline-1 fixed right-0 left-0 top-0 mb-6 z-[100] bg-[#020024AA]  dark:bg-slate-200 backdrop-blur-[100px]'>
           <div className='flex justify-between items-center max-w-[1100px] mx-auto'>
-            <SectionTitle text={'Works'} classes={'pb-4'} />
-            <Link className='p-4 outline outline-1 rounded-lg' to={'/#works'}>Back To Works</Link>
+            <SectionTitle text={'Works'} classes={'pb-4 text-[30px] sm:text-4xl'} />
+            <div className='flex items-center gap-x-5'>
+              <Expand duration={750} toggled={theme === 'light'} toggle={changeTheme} className='text-2xl' />
+              <Link className='sm:p-4 p-2  outline outline-1 rounded-lg' to={'/#works'}>Back To Works</Link>
+            </div>
+
           </div>
         </div>
 
