@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -26,7 +27,19 @@ function SamplePrevArrow(props) {
   );
 }
 
-function ProjectSlide({pics}) {
+function ProjectSlide({ pics }) {
+  const [loadedImages, setLoadedImages] = useState({});
+
+  useEffect(() => {
+    pics.forEach((pic, index) => {
+      const img = new Image();
+      img.onload = () => {
+        setLoadedImages(prevState => ({ ...prevState, [index]: true }));
+      };
+      img.src = pic;
+    });
+  }, [pics]);
+
   const settings = {
     className: "max-w-5xl mx-auto",
     dots: true,
@@ -45,20 +58,19 @@ function ProjectSlide({pics}) {
   return (
     <div>
       <div className="slider-container px-3 py-10">
-    <Slider {...settings}>
-      {
-        pics.map(pic => (
-          <div className="p-5">
-              <div style={{backgroundImage: `url(${pic})`}} className='w-full h-[500px] rounded-[10px] outline outline-1 bg-top bg-cover'></div>
-          </div>
-        ))
-      }
-
-    </Slider>
-  </div>
+        <Slider {...settings}>
+          {pics.map((pic, index) => (
+            <div key={index} className="p-5">
+              {!loadedImages[index] ? (
+                <Skeleton className='w-full h-[500px] rounded-[10px]' />
+              ) : (
+                <div style={{ backgroundImage: `url(${pic})` }} className='w-full h-[500px] rounded-[10px] outline outline-1 bg-top bg-cover'></div>
+              )}
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
-
-
   );
 }
 

@@ -17,6 +17,13 @@ export default {
       colors:{
         'blue-black' : '#020024',
         'dark-blue-1': '#302F4E',
+        // const colors = {
+        //   'blue-black': 'rgb(2, 0, 36)',
+        //   'dark-blue-1': 'rgb(48, 47, 78)',
+        //   // Add other colors if needed
+        // };
+        
+
         'bg-blue' : 'rgb(2,0,36)',
         'custom-color-1': '#fff',
         primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"}

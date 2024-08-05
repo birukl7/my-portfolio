@@ -1,24 +1,44 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Technology from './Technology';
 import { Link } from 'react-router-dom';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 function WorkCard({ pics, title, siteLink, gitLink, description, readLink, firstTech = 'Node js', secondTech = 'Mongo DB', category }) {
 
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
   const { ref: workRef, inView: myElementIsVisible} = useInView({
     triggerOnce: true,
     threshold: 0.1
   })
 
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setIsImageLoaded(true);
+    };
+    img.src = pics[0];
+  }, []);
+
 
   return (
     <div className={`rounded-lg overflow-hidden bg-[#0b1e38] dark:bg-white dark:text-black transition-all duration-500 ease-in-out shadow-xl outline outline-[1px] ${myElementIsVisible ? 'animate-toRight' : ''}`} ref={workRef} >
-      {/* Image container */}
-      <div className='h-60 w-full bg-no-repeat bg-center bg-140% hover:bg-150% transition-all duration-300 ease-in-out border-b-[1px] mb-6 border-black rounded-[10px]' style={{backgroundImage: `url(${pics[0]})`}}>
-    </div>
+     
+      <div className='h-60 w-full relative mb-6 border-b-[1px] border-black rounded-[10px]'>
+        {!isImageLoaded && (
+          <Skeleton className='h-full w-full rounded-[10px]' />
+        )}
+        {isImageLoaded && (
+          <div className='h-full w-full bg-no-repeat bg-center bg-140% hover:bg-150% transition-all duration-300 ease-in-out' style={{ backgroundImage: `url(${pics[0]})` }}>
+          </div>
+        )}
+      </div>
+      {/* <div className='h-60 w-full bg-no-repeat bg-center bg-140% hover:bg-150% transition-all duration-300 ease-in-out border-b-[1px] mb-6 border-black rounded-[10px]' style={{backgroundImage: `url(${pics[0]})`}}>
+    </div> */}
 
     <div className='flex justify-start ml-4 gap-x-2 mt-3'>
       <Technology text={firstTech} class={'bg-slate-50 text-black  sm:uppercase text-xs py-1 px-3 shadow-sm shadow-yellow-200  capitalize'} />

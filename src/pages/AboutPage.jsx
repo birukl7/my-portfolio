@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Progress from '../components/Progress';
 import ScrollTrigger from 'react-scroll-trigger';
 import PrimaryButton from '../components/PrimaryButton';
 import Numbers from '../components/Numbers';
-import { faCertificate, faCoffee, faPeopleGroup, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import myPicture from '/images/body-images/my-picture.svg';
 import SectionTitle from '../components/SectionTitle';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Blurhash } from 'react-blurhash';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 function AboutPage() {
   const [progressVisible, setProgressVisible] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false)
 
   const handleProgressVisible = () => {
     setProgressVisible(true);
@@ -25,6 +28,14 @@ function AboutPage() {
     document.body.removeChild(link);
   };
 
+  useEffect(()=>{
+    const img = new Image()
+    img.onload = () => {
+      setIsImageLoaded(true)
+    }
+    img.src = myPicture
+  },[])
+
   return (
     <section id='about' className='h-auto pt-16 md:pt-20'>
       <div className='sm:mb-10'>
@@ -35,7 +46,22 @@ function AboutPage() {
       </div>
       <div className='flex gap-x-6 '>
         <div className='hidden  bg-yellow-500 dark:bg-blue-500 rounded-full about-pic-css '>
-          <img src={myPicture} className='w-full h-full object-contain ' alt="profile" />
+          {!isImageLoaded && (
+            // <Blurhash 
+            //   hash='LGHok7Ri0wkD4-of.AjYIoa~-ooc'
+            //   width={'100%'}
+            //   height={'100%'}
+            //   resolutionX={32}
+            //   resolutionY={32}
+            //   punch={1}
+            // />
+            <Skeleton circle={true} height={'100%'} width={'100%'}/>
+          )}
+
+          {
+            isImageLoaded && (          <img src={myPicture} className='w-full h-full object-contain ' alt="profile" />)
+          }
+
         </div>
         <div className='sm:flex gap-x-4 bg-inherit bg-white p-5 rounded-2xl sm:w-11/12 shadow-xl'>
           <div className='sm:w-1/2 pt-8 pl-3'>

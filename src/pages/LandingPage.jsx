@@ -2,10 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' //free Font Awe
 import  { useEffect, useState } from 'react'
 import myPicture from '/images/body-images/my-picture.svg' // The picture in the landing page
 import { faGithub, faLinkedinIn, faTelegram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 
 function LandingPage() {
   const [screenH, setScreenH] =useState(window.innerHeight)
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
   // const [text, setText]= useState('')
   useEffect(()=>{
     const handleResize= ()=>{
@@ -17,6 +20,14 @@ function LandingPage() {
     }
   }, [])
 
+    useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setIsImageLoaded(true);
+    };
+    img.src = myPicture;
+  }, []);
+
 
   return (
     <section className="mb-5 relative"  id='home'>
@@ -25,7 +36,12 @@ function LandingPage() {
       <div className='h-screen  flex justify-center flex-col relative items-center mx-auto'>
         <div className='flex flex-col items-centers relative justify-center mx-auto'>
           <div className='mx-auto bg-yellow-400 dark:bg-blue-400 relative sm:w-[370px] sm:h-[333px] overflow-hidden' id='landing-pic-container'>
-            <img src={myPicture} alt ="" className='w-full h-full object-cover' id=''/>
+          {!isImageLoaded && (
+            <Skeleton circle={true} height={'100%'} width={'100%'} />
+          )}
+          {isImageLoaded && (
+            <img src={myPicture} className='w-full h-full object-contain' alt="profile" />
+          )}
 
           </div>
 

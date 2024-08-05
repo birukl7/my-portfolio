@@ -6,6 +6,7 @@ import './index.css'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import Project from './pages/Project.jsx'
 import { ThemeProvider } from './components/ThemeContext.jsx'
+import { SkeletonTheme } from 'react-loading-skeleton'
 
 const router = createBrowserRouter([
   {
@@ -22,9 +23,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <SkeletonTheme baseColor="#202020" highlightColor="#444" >
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </SkeletonTheme>
   </React.StrictMode>,
 )
 
