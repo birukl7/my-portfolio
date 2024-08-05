@@ -104,7 +104,7 @@ function AboutPage() {
         </div>
       </div>
 
-      <div className='grid sm:grid-cols-2 gap-x-4 mt-5 md:grid-cols-4 sm:w-11/12 hidden'> 
+      <div className=' sm:grid-cols-2 gap-x-4 mt-5 md:grid-cols-4 sm:w-11/12 hidden'> 
         <Numbers icon={'bi bi-hand-thumbs-up'} number={'3'} message={'Projects Completed'} bgColor={'bg-slate-300'} id={'fire'}/>
         <Numbers icon={'bi bi-people'} number={'4'} message={'Satasfied Clients'} bgColor={'bg-slate-300'} />
         <Numbers icon={'bi bi-patch-check'} number={'1'} message={'Cup of Coffee'} bgColor={'bg-slate-300'} />
