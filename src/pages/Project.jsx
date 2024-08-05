@@ -45,7 +45,7 @@ function Project() {
             <ProjectSlide pics={project.pics}/>
           </div>
 
-          <div className='px-20'>
+          <div className='sm:px-20 px-5'>
             <SectionTitle text={project.name} />
             <div className='flex flex-col gap-y-5'>
               <p className='max-w-[750px]'><a href={project.siteLink} target='_blank' className='font-semibold underline'>{project.name}</a> {project.descriptions[0].split(' ').slice(2).join(' ')}</p>

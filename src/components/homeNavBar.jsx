@@ -84,7 +84,7 @@ function HomeNavBar({ classes }) {
            cs:hidden' onClick={toggleMobileNav} id='hamburger'></div>
         </div>
 
-        <nav className='fixed top-0 bottom-0 h-screen -left-full cs:right-24 sm:right-16 transition-left ease-in-out duration-500 p-5 overflow-hidden  bg-dark-blue-1  backdrop-blur-3xl  dark:bg-slate-300 flex flex-col  justify-between items-center w-80 text-sm md:text-lg font-light dark:font-semibold 
+        <nav className='fixed top-0 bottom-0 h-screen -left-full  cs:right-24 sm:right-16 transition-left ease-in-out duration-500 p-5 overflow-hidden  bg-dark-blue-1  backdrop-blur-3xl  dark:bg-slate-300 flex flex-col  justify-between items-center w-[290px] sm:w-80 text-sm md:text-lg font-light dark:font-semibold 
          cs:top-0 cs:w-custom-w cs:bottom-0 cs:left-0 z-50 cs:z-40  cs:justify-evenly' id='nav-bar'>
           <ul className='flex flex-col items-center justify-between pt-7
            cs:pt-5 cs:pl-3 cs:mt-20'>
