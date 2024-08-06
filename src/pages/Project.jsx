@@ -37,7 +37,7 @@ function Project() {
         <div className=' px-4 py-1 sm:p-4 outline-1 fixed right-0 left-0 top-0 mb-6 z-[100] bg-[#020024AA]  dark:bg-slate-200 backdrop-blur-[100px]'>
           <div className='flex justify-between items-center max-w-[1100px] mx-auto'>
             <SectionTitle text={'Works'} classes={'pb-4 text-[30px] sm:text-4xl'} />
-            <div className='flex items-center gap-x-5'>
+            <div className='flex items-center gap-x-4'>
               <Expand duration={750} toggled={theme === 'light'} toggle={changeTheme} className='text-2xl' />
               <Link className='sm:p-4 p-2  outline outline-1 rounded-lg' to={'/#works'}>Back To Works</Link>
             </div>

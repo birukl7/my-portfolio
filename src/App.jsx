@@ -9,7 +9,7 @@ import LandingPage from './pages/LandingPage';
 import RecentWorks from './pages/RecentWorks';
 import Service from './pages/Service';
 import { useTheme } from './components/ThemeContext';
-import HomeNavBar from './components/homeNavBar';
+import HomeNavBar from './components/HomeNavBar';
 
 function App() {
  
