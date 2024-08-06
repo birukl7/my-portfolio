@@ -44,7 +44,6 @@ function Project() {
 
           </div>
         </div>
-
         <div className='pt-12'>
           <div className='grid grid-cols-1 gap-x-5'>
             <ProjectSlide pics={project.pics}/>
