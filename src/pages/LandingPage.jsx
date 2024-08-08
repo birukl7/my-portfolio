@@ -54,7 +54,7 @@ function LandingPage() {
       }
     };
 
- 
+    fetchVisitCount()
   },[apiBaseUrl])
 
 
