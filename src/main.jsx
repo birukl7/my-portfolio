@@ -22,13 +22,13 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+
      <ThemeProvider>
       <SkeletonTheme baseColor="#202020" highlightColor="#505050" >
         <RouterProvider router={router} />
       </SkeletonTheme>
     </ThemeProvider>
-  </React.StrictMode>,
+  
 )
 
 // reportWebVitals();
