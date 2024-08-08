@@ -35,7 +35,7 @@ function LandingPage() {
   useEffect(()=>{
     const fetchVisitCount = async () => {
       try {
-        const response = await fetch(`${apiBaseUrl}/visit-count`);
+        const response = await fetch(`${apiBaseUrl}`);
         
         // Check if response is not ok
         if (!response.ok) {
@@ -44,7 +44,8 @@ function LandingPage() {
 
         // Parse JSON data
         const data = await response.json();
-        setVisitCount(data.count); // Adjust based on your API response structure
+        setVisitCount(data.visits); // Adjust based on your API response structure
+        console.log(data.visits)
 
       } catch (err) {
         // Handle error
