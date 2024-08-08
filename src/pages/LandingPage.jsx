@@ -7,8 +7,12 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 
 function LandingPage() {
+  const [visitCount, setVisitCount] = useState(0);
   const [screenH, setScreenH] =useState(window.innerHeight)
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [isNumberLoaded, setIsNumberLoaded] = useState(false)
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
   // const [text, setText]= useState('')
   useEffect(()=>{
     const handleResize= ()=>{
@@ -28,10 +32,31 @@ function LandingPage() {
     img.src = myPicture;
   }, []);
 
+  useEffect(()=>{
+    const fetchVisitCount = async () => {
+      try {
+          const response = await fetch(`${apiBaseUrl}`);
+          const data = await response.json();
+          setVisitCount(data.visits);
+          setIsNumberLoaded = true
+      } catch (error) {
+          console.error('Error fetching visit count:', error);
+      }
+  };
+
+  fetchVisitCount();
+  },[])
+
 
   return (
-    <section className="mb-5 relative"  id='home'>
+    <section className="mb-5 relative "  id='home'>
       {/* A div element to center a container */}
+        {/* <div className='absolute top-[100px] left-[30px] flex text-xs gap-x-2 outline outline-[0.2px] rounded-sm '>
+          <div className='p-[5px]'>
+          Page visits 
+          </div> <span className='p-[5px] bg-blue-500 dark:bg-red-500 dark:text-white'>
+            {visitCount}
+            </span></div> */}
       
       <div className='h-screen  flex justify-center flex-col relative items-center mx-auto'>
         <div className='flex flex-col items-centers relative justify-center mx-auto'>
@@ -46,9 +71,12 @@ function LandingPage() {
           </div>
 
           <div className='mt-3 flex flex-col mx-auto'>
-            <h1 className='text-center sm:text-6xl text-4xl font-Truculenta font-extrabold '>Full-Stack Developer<span className='text-4xl animate-wiggle hover:cursor-pointer'>👋</span></h1>
+            <h1 className='text-center sm:text-6xl text-4xl font-Truculenta font-extrabold '>Full-Stack Developer<span className='text-4xl animate-wiggle hover:cursor-pointer'>👋</span>
+            </h1>
             <div className='flex items-start justify-center '>
-              <p className=' my-4 md:text-xl font-Truculenta sm:w-[310px] align-middle  w-[250px]' style={{textAlign: 'center'}}> Hi, I'm Biruk Lemma. A passionate Full-Stack Developer based in Ethiopia, Addis Ababa 📍.</p>
+              <p className=' my-4 md:text-xl font-Truculenta sm:w-[350px] align-middle  w-[210px]' style={{textAlign: 'center'}}>
+              <span className='block text-[14px]'>#Page visit: {visitCount}</span>
+              <hr className='pb-1' /> Hi, I'm Biruk Lemma. A passionate Full-Stack Developer based in Ethiopia, Addis Ababa 📍.</p>
               <ul className='my-4 text-xl font-Truculenta dynamic-texts hidden'>
               </ul>
             </div>
