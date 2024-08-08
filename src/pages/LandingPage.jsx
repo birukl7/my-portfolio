@@ -37,18 +37,17 @@ function LandingPage() {
       try {
         const response = await fetch(`${apiBaseUrl}`);
         
-        // Check if response is not ok
+
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        // Parse JSON data
+      
         const data = await response.json();
-        setVisitCount(data.visits); // Adjust based on your API response structure
-        console.log(data.visits)
+        setVisitCount(data.visits);
 
       } catch (err) {
-        // Handle error
+        
         console.error('Error fetching visit count:', err);
         setError(err.message);
       }
