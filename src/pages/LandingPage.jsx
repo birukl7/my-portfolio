@@ -35,17 +35,26 @@ function LandingPage() {
   useEffect(()=>{
     const fetchVisitCount = async () => {
       try {
-          const response = await fetch(`${apiBaseUrl}`);
-          const data = await response.json();
-          setVisitCount(data.visits);
-          setIsNumberLoaded = true
-      } catch (error) {
-          console.error('Error fetching visit count:', error);
-      }
-  };
+        const response = await fetch(`${apiBaseUrl}/visit-count`);
+        
+        // Check if response is not ok
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
-  fetchVisitCount();
-  },[])
+        // Parse JSON data
+        const data = await response.json();
+        setVisitCount(data.count); // Adjust based on your API response structure
+
+      } catch (err) {
+        // Handle error
+        console.error('Error fetching visit count:', err);
+        setError(err.message);
+      }
+    };
+
+ 
+  },[apiBaseUrl])
 
 
   return (
