@@ -4,14 +4,14 @@ import myPicture from '/images/body-images/my-picture.svg' // The picture in the
 import { faGithub, faLinkedinIn, faTelegram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import { useCount } from '../components/PageCountContext';
 
 
 function LandingPage() {
-  const [visitCount, setVisitCount] = useState(0);
+
+  const {visitCount} = useCount()
   const [screenH, setScreenH] =useState(window.innerHeight)
   const [isImageLoaded, setIsImageLoaded] = useState(false);
-  const [isNumberLoaded, setIsNumberLoaded] = useState(false)
-  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
   // const [text, setText]= useState('')
   useEffect(()=>{
@@ -32,29 +32,7 @@ function LandingPage() {
     img.src = myPicture;
   }, []);
 
-  useEffect(()=>{
-    const fetchVisitCount = async () => {
-      try {
-        const response = await fetch(`${apiBaseUrl}`);
-        
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-      
-        const data = await response.json();
-        setVisitCount(data.visits);
-
-      } catch (err) {
-        
-        console.error('Error fetching visit count:', err);
-        setError(err.message);
-      }
-    };
-
-    fetchVisitCount()
-  },[apiBaseUrl])
 
 
   return (

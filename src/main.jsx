@@ -7,6 +7,7 @@ import NotFoundPage from './pages/NotFoundPage.jsx'
 import Project from './pages/Project.jsx'
 import { ThemeProvider } from './components/ThemeContext.jsx'
 import { SkeletonTheme } from 'react-loading-skeleton'
+import { CountProvider } from './components/PageCountContext.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,9 +25,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
 
      <ThemeProvider>
-      <SkeletonTheme baseColor="#202020" highlightColor="#505050" >
-        <RouterProvider router={router} />
-      </SkeletonTheme>
+      <CountProvider>
+        <SkeletonTheme baseColor="#202020" highlightColor="#505050" >
+          <RouterProvider router={router} />
+        </SkeletonTheme>
+      </CountProvider>
     </ThemeProvider>
   
 )
