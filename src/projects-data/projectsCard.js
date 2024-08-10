@@ -82,10 +82,10 @@ const projects = [
     name: 'My Portfolio',
     firstTech: 'React Js',
     secondTech: 'Tailwind ',
-    tags: ["Portfolio","React Js", "Files"],
-    descriptions: [''],
+    tags: ["Portfolio","React Js", "Node js", "Files", "Json" ],
+    descriptions: ['My portfolio showcases projects ranging from dynamic user interfaces to robust backend systems.'],
     siteLink: 'https://biruklemma.com',
-    githubLink: '',
+    githubLink: 'https://github.com/birukl7',
     readLink: '/works/4',
     catagory: ['Frontend', 'UI/UX'],
   }
