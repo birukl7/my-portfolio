@@ -85,7 +85,7 @@ function AboutPage() {
 
                 <Progress
                   name={'Frontend Development'}
-                  percent={79}
+                  percent={85}
                   class={'mt-3'}
                   barColor={'bg-red-500'}
                   bgColor={'bg-slate-200'}
@@ -93,7 +93,7 @@ function AboutPage() {
 
                 <Progress
                   name={'UI/UX Principles'}
-                  percent={75}
+                  percent={80}
                   class={'mt-3'}
                   barColor={'bg-blue-500'}
                   bgColor={'bg-slate-200'}
