@@ -8,6 +8,8 @@ import Project from './pages/Project.jsx'
 import { ThemeProvider } from './components/ThemeContext.jsx'
 import { SkeletonTheme } from 'react-loading-skeleton'
 import { CountProvider } from './components/PageCountContext.jsx'
+import MotionCard from './components/MotionCard.jsx'
+import Big from './components/Big.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,9 @@ const router = createBrowserRouter([
   {
     path: '/works/:id',
     element: <Project />
+  },{
+    path: '/dummy',
+    element: <Big />
   }
 ]);
 
