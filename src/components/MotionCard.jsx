@@ -5,19 +5,38 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import { FiMousePointer } from "react-icons/fi";
 import myPortfolio1 from '/images/body-images/my-portfolio/my-portfolio1.png'
 import WorkCard from "./WorkCard";
 
-const MotionCard = () => {
+const MotionCard = ({
+  title,
+  firstTech, 
+  secondTech, 
+  description, 
+  gitLink, 
+  category, 
+  siteLink, 
+  readLink, 
+  pics,
+}) => {
   return (
     <motion.div
-      initial={{ width: 'auto' }} // Initial width
-      whileHover={{ width: 400 }} // Width on hover
+      initial={{ width: 'auto', }} // Initial width
+      whileHover={{ width: 350, }} // Width on hover
       transition={{ duration: 0.25 }} // Transition duration for width
-      className="text-white hover:shadow-lg hover:z-[100]"
+      className="text-white hover:shadow-lg hover:z-[5]"
     >
-      <TiltCard />
+      <TiltCard
+        title={title}
+        firstTech={firstTech}
+        secondTech={secondTech}
+        description={description}
+        gitLink={gitLink}
+        category={category}
+        siteLink={siteLink}
+        readLink={readLink}
+        pics={pics}
+      />
     </motion.div>
   );
 };
@@ -25,7 +44,17 @@ const MotionCard = () => {
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
 
-const TiltCard = () => {
+const TiltCard = ({
+  title,
+  firstTech, 
+  secondTech, 
+  description, 
+  gitLink, 
+  category, 
+  siteLink, 
+  readLink, 
+  pics,
+}) => {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -90,15 +119,15 @@ const TiltCard = () => {
           // className="text-center text-2xl font-bold"
         >
             <WorkCard 
-              title={'Selam'}
-              firstTech={'edu'}
-              secondTech={'framer'}
-              description={'lorem he is nd d ldijkjl jklikjs sende yemiset aynet konkoa nw eyaweraw yalehut ende endea '}
-              gitLink={''}
-              category={['name','age']}
-              siteLink={''}
-              readLink={''}
-              pics={myPortfolio1}
+              title={title}
+              firstTech={firstTech}
+              secondTech={secondTech}
+              description={description}
+              gitLink={gitLink}
+              category={category}
+              siteLink={siteLink}
+              readLink={readLink}
+              pics={pics}
             />
         </p>
       </div>

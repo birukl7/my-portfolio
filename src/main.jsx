@@ -10,6 +10,7 @@ import { SkeletonTheme } from 'react-loading-skeleton'
 import { CountProvider } from './components/PageCountContext.jsx'
 import MotionCard from './components/MotionCard.jsx'
 import Big from './components/Big.jsx'
+import BorderAnimation from './components/BorderAnimation.jsx'
 
 const router = createBrowserRouter([
   {
@@ -20,10 +21,8 @@ const router = createBrowserRouter([
   {
     path: '/works/:id',
     element: <Project />
-  },{
-    path: '/dummy',
-    element: <Big />
   }
+  
 ]);
 
 

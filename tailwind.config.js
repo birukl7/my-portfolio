@@ -61,12 +61,18 @@ export default {
             transform: 'translateY(0px)',
             opacity: '1'
           }
+        },
+        'border-spin': {
+          '100%': {
+            transform: 'rotate(-360deg)',
+          },
         }
 
       },
       animation: {
         wiggle: 'wiggle 30s ease-in-out infinite',
-        toRight: 'toRight 1s ease-in-out forwards'
+        toRight: 'toRight 1s ease-in-out forwards',
+        'border-spin': 'border-spin 7s linear infinite',
       }
     },
     screens:{

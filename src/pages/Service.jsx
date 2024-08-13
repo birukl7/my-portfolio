@@ -21,14 +21,23 @@ function Service(props) {
 
         <div className='flex justify-center items-center'>
           <div>
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 p-3 max-w-5xl'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 gap-x-4 p-3 max-w-5xl'>
+              <div >
               <ServiceCard image={uiUx} title={'Web Develpment'} text={'Passionate about creating responsive web applications with intuitive user interfaces. Ready to collaborare on your next project.'} />
+              </div>
+              <div >
               <ServiceCard 
                 image={APIDev} 
                 title={'API Development'} 
                 text={'Experienced in building efficient and scalable APIs. Focused on creating reliable back-end solutions to support your applications.'}
               />
-              <ServiceCard image={webDev} title={'UI/UX Design '} text={'With a focus on intuitive design and robust performance, I strive to create impactful solutions that enhance user experience.'}/>            
+              </div>
+              <div >
+              <ServiceCard image={webDev} title={'UI/UX Design '} text={'With a focus on intuitive design and robust performance, I strive to create impactful solutions that enhance user experience.'}/> 
+              </div>
+            
+
+           
             </div>
             <p className='font-Truclenta text-center py-3'>Looking for a custom job? <a href="#contact " className='text-red-400'>Click here </a>to contact me ✨</p>
           </div>

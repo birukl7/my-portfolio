@@ -4,6 +4,7 @@ import WorkCard from '../components/WorkCard';
 import SectionTitle from '../components/SectionTitle';
 import projects from '../projects-data/projectsCard';
 import sorryImage from '/images/body-images/sorry.png'
+import MotionCard from '../components/MotionCard';
 
 function RecentWorks() {
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -46,7 +47,7 @@ function RecentWorks() {
                 </p></div> 
               :
               filteredProjects.map((project, index) => (
-                <WorkCard 
+                <MotionCard 
                   title={project.name}
                   firstTech={project.firstTech}
                   secondTech={project.secondTech}
