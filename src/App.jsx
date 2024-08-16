@@ -81,11 +81,11 @@ function App() {
               </div>
             </div>
             
-            <section className='text-slate-100 dark:text-slate-900 ' >
+            {/* <section className='text-slate-100 dark:text-slate-900 ' >
               <div className='max-w-screen-xl my-0 mx-auto w-11/12 cs:h-screen flex justify-center items-center'>
                 <Experience />
               </div>
-            </section>
+            </section> */}
             
             <div className='text-slate-100 dark:text-slate-900 '>
               <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>

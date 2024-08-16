@@ -26,7 +26,8 @@ function WorkCard({ pics, title, siteLink, gitLink, description, readLink, first
 
 
   return (
-    <div className={`rounded-lg overflow-hidden bg-[#0b1e38] dark:bg-white dark:text-black transition-all duration-500 ease-in-out shadow-xl outline outline-[1px] ${myElementIsVisible ? 'animate-toRight' : ''}`} ref={workRef} >
+    <div className={`rounded-lg overflow-hidden bg-[#0b1e38] dark:bg-white dark:text-black transition-all duration-500 ease-in-out shadow-xl outline outline-[1px] ${myElementIsVisible ? 'animate-toRight' : ''}`} 
+     >
      
       <div className='h-60 w-full relative mb-6 border-b-[1px] border-black rounded-[10px]'>
         {!isImageLoaded && (

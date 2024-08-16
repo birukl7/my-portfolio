@@ -63,7 +63,7 @@ function LandingPage() {
             <div className='flex items-start justify-center '>
               <p className=' my-4 md:text-xl font-Truculenta sm:w-[350px] align-middle  w-[210px]' style={{textAlign: 'center'}}>
               <span className='block text-[14px]'>#Page visit: {visitCount}</span>
-              <hr className='pb-1' /> Hi, I'm Biruk Lemma. A passionate Full-Stack Developer based in Ethiopia, Addis Ababa 📍.</p>
+              <hr className='pb-1' /> Hi, I'm Biruk Lemma. A Full-Stack Developer based in Ethiopia, Addis Ababa 📍.</p>
               <ul className='my-4 text-xl font-Truculenta dynamic-texts hidden'>
               </ul>
             </div>

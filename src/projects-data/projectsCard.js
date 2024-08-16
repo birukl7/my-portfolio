@@ -40,8 +40,8 @@ const projects = [
     secondTech: 'Blade',
     tags: ["mental health", "college students", "health consultations"],
     descriptions: [
-      'Health Guard is a mental health platform meticulously crafted to support college students grappling with mental health challenges. Developed using Laravel and Blade templating, this comprehensive solution addresses critical issues by offering a wide array of resources and services tailored to the unique needs of its users. The platform facilitates live chats and consultations with health professionals, ensuring students have direct access to expert advice and support. Additionally, Health Guard features interactive quizzes designed to engage users and help them assess their mental well-being.',
-      ' The project, which earned 4th place in a university hackathon, reflects a deep commitment to leveraging technology for social good and underscores the importance of accessible mental health resources in academic settings. By integrating these features into a user-friendly interface, Health Guard not only enhances students\' ability to manage their mental health but also promotes a culture of well-being and support within the college community.'],
+      'Health Guard is a mental health platform designed to support college students dealing with mental health challenges. Built with Laravel and Blade templating, this solution provides a range of resources and services tailored to students\' needs. It offers live chats and consultations with health professionals, giving students easy access to expert advice and support. The platform also includes interactive quizzes to help users assess their mental well-being.',
+      ' The project, which earned 4th place in a university hackathon, highlights the importance of making mental health resources accessible in academic settings. By incorporating these features into an easy-to-use interface, Health Guard helps students manage their mental health and fosters a supportive environment within the college community.'],
     githubLink: 'https://github.com/birukl7/health-guard',
     siteLink: 'https://healthguard.biruklemma.com',
     readLink: '/works/1',
@@ -56,8 +56,8 @@ const projects = [
     secondTech: 'Laravel',
     tags: ["Locations", "Vacancy", "Entertainment", "Inertia Js"],
     descriptions: [
-      'Mall in Addis Ababa is an innovative front-end application developed using React, designed to enhance the shopping experience for users navigating malls in Addis Ababa. This platform serves as a comprehensive guide to the various amenities and products available in local malls, including clothing, accessories, and job vacancies. The application offers an intuitive user interface that allows shoppers to easily search for specific items, explore different stores, and view detailed information about products and services.', 
-    ' By integrating features such as interactive maps and real-time updates on store offerings, Mall In aims to streamline the shopping journey and make it more efficient for users. The project showcases advanced front-end development skills, leveraging React\'s powerful capabilities to build a dynamic and responsive application. Mall In not only helps users find what they need but also supports mall businesses by providing them with a digital presence and a platform to reach potential customers more effectively. This project exemplifies a thoughtful approach to solving real-world problems through technology, combining user-centric design with functional features to create a valuable tool for both shoppers and retailers.'
+      'Mall in Addis Ababa is a front-end application developed using React, aimed at helping users find and rent available spaces in malls across Addis Ababa. The platform provides information on rental opportunities within local malls, including details about space availability. The current version includes a user-friendly interface that allows users to search for and view information about available rental spaces.', 
+    'While the project is still in development and only the front-end is complete, it features interactive maps and a responsive design to enhance the user experience. Mall In showcases advanced front-end development skills with React, and aims to offer a digital platform for users to explore and secure rental spaces in malls. This project represents a step towards creating a valuable tool for both users seeking rental spaces and mall businesses looking to present available spaces online.'
     ],
     githubLink: 'https://github.com/birukl7/mall-in',
     siteLink: 'https://addismall.biruklemma.com',
@@ -71,7 +71,7 @@ const projects = [
     firstTech: 'Vanilla JS',
     secondTech: 'CSS',
     tags: ["Canva", "Game"],
-    descriptions: ['Space Invaders is a classic arcade game recreated using Vanilla JS and CSS. Players control a spaceship and must defend the planet by shooting down waves of alien invaders. Use keys A and D to move left and right and the SPACE key to shoot. The game is best experienced on large screens.'],
+    descriptions: ['Space Invaders is a classic arcade game recreated using Vanilla JS and CSS. In this game, players control a spaceship to defend the planet by shooting down waves of alien invaders. Use the A and D keys to move left and right, and the SPACE key to shoot. For the best experience, play on a large screen.'],
     siteLink: 'https://birukl7.github.io/space-invaders/',
     githubLink: 'https://github.com/birukl7/health-guard',
     readLink: '/works/3',

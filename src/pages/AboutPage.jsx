@@ -66,14 +66,13 @@ function AboutPage() {
         <div className='sm:flex gap-x-4 bg-inherit bg-white p-5 rounded-2xl sm:w-11/12 shadow-xl'>
           <div className='sm:w-1/2 pt-8 pl-3'>
             <p className=' pl-1 font-RobotoCondensed dark:font-semibold '>
-            My passion for technology and innovation began when I joined college, where I quickly discovered my knack for programming and software development. These days, my main focus is on developing web-based products and impactful projects. I'm a fast learner, and whenever I'm not working on a project, I'm always learning something new.
+            My interest in technology and innovation began when I joined college, where I quickly found my ability in programming and software development. These days, my main focus is on developing web-based products and impactful projects. I'm a fast learner, and whenever I'm not working on a project, I'm always learning something new.
             </p>
 
             <PrimaryButton text={'Download Resume'} class={'mt-6 text-white'} onclick={handleDownload} />
           </div>
 
-          <div className='p-3 pt-8 flex-1 sm:w-1/2'>
-            {/* Render Progress component conditionally based on visibility */}
+          {/* <div className='p-3 pt-8 flex-1 sm:w-1/2'>
             {progressVisible && (
               <>
                 <Progress
@@ -100,7 +99,7 @@ function AboutPage() {
                 />
               </>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
 
