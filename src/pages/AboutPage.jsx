@@ -9,6 +9,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Blurhash } from 'react-blurhash';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function AboutPage() {
   const [progressVisible, setProgressVisible] = useState(false);
@@ -69,7 +71,7 @@ function AboutPage() {
             My interest in technology and innovation began when I joined college, where I quickly found my ability in programming and software development. These days, my main focus is on developing web-based products and impactful projects. I'm a fast learner, and whenever I'm not working on a project, I'm always learning something new.
             </p>
 
-            <PrimaryButton text={'Download Resume'} class={'mt-6 text-white'} onclick={handleDownload} />
+            <PrimaryButton text={'Download Resume'} class={'mt-6 -ml-2 text-white'} icon={<FontAwesomeIcon icon={faDownload} />} onclick={handleDownload} />
           </div>
 
           {/* <div className='p-3 pt-8 flex-1 sm:w-1/2'>

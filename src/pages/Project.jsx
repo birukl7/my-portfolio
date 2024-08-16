@@ -70,7 +70,7 @@ function Project() {
                 <a className='p-2 px-6 rounded-full flex items-center bg-transparent outline outline-1 hover:pr-8 transition-all duration-150' href={project.githubLink} target='_blank'><FontAwesomeIcon icon={faGithub}/></a>
               </div>
 
-              <div className='text-slate-100 dark:text-slate-900 '>
+              {/* <div className='text-slate-100 dark:text-slate-900 '>
                 <div className='max-w-screen-xl my-0 mx-auto w-11/12 '>
                   <Contact />
                 </div>
@@ -85,7 +85,7 @@ function Project() {
                   </iframe>
                 </div>
 
-              </div>
+              </div> */}
           </div>
 
 

@@ -67,9 +67,9 @@ function HomeNavBar({ classes }) {
     { href: '/#home', text: 'Home', icon: faHome },
     { href: '/#about', text: 'About', icon: faUser},
     { href: '/#works', text: 'Works', icon: faSuitcase },
-    { href: '/#service', text: 'Service', icon: faChartSimple },
-    { href: '/#expert', text: 'Experience' , icon: faCubesStacked},
-    { href: '/#contact', text: 'Contact', icon: faAddressCard }
+    // { href: '/#service', text: 'Service', icon: faChartSimple },
+    // { href: '/#expert', text: 'Experience' , icon: faCubesStacked},
+    // { href: '/#contact', text: 'Contact', icon: faAddressCard }
   ];
 
   return (

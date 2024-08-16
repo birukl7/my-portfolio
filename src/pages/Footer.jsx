@@ -1,6 +1,7 @@
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import Technology from '../components/Technology'
 
 function Footer() {
   return (
@@ -16,6 +17,8 @@ function Footer() {
         <FontAwesomeIcon icon={faArrowUp} className='outline outline-1   rounded-full p-3 bg-black dark:text-white' />
         </a>
       </div>
+
+      <Technology text = {'Updated: April 16 2024'} class={'p-4 rounded-none bg-white text-black uppercase'} />
     </footer>
   )
 }

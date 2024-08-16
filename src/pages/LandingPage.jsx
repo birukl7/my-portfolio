@@ -5,6 +5,8 @@ import { faGithub, faLinkedinIn, faTelegram, faTwitter, faWhatsapp } from '@fort
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { useCount } from '../components/PageCountContext';
+import { faDownload, faEnvelope, faMailForward } from '@fortawesome/free-solid-svg-icons';
+import PrimaryButton from '../components/PrimaryButton';
 
 
 function LandingPage() {
@@ -12,6 +14,16 @@ function LandingPage() {
   const {visitCount} = useCount()
   const [screenH, setScreenH] =useState(window.innerHeight)
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleDownload = () => {
+    const documentUrl = '/documents/Biruk Lemma\'s Resume.pdf';
+    const link = document.createElement('a');
+    link.href = documentUrl;
+    link.setAttribute('download', 'Biruk Lemma Resume');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   // const [text, setText]= useState('')
   useEffect(()=>{
@@ -73,13 +85,14 @@ function LandingPage() {
             <a href="https://github.com/birukl7" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faGithub}/></a>
             <a href="https://linkedin.com/in/biruk-lemma" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faLinkedinIn}/></a>
             <a href="https://twitter.com/biruk_777?t=ncFmziryKXbgwMzOcFuRxw&s=09" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faTwitter}/></a>
-            <a href="https://wa.me/+251944055361" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faWhatsapp}/></a>
+            <a href="mailto:biruklemmadebela.com" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faEnvelope}/></a>
             <a href="https://t.me/birukl_777" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faTelegram}/></a>
           </ul>
          
-          <a href="#contact" className='bg-red-500 dark:text-white w-auto my-0 mx-auto px-7 py-2 font-semibold text-sm  rounded-full hover:bg-red-600 transition-all duration-300 ease-in-out sm:mt-1 mt-7'>
-            Say Hi
-          </a>
+
+          <PrimaryButton text={"Resume"} onclick={handleDownload} icon={<FontAwesomeIcon icon={faDownload} className='text-[16px]' />}/>
+            
+          
 
           
         </div>
