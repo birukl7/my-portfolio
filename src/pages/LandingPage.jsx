@@ -47,7 +47,7 @@ function LandingPage() {
       
       <div className='h-screen  flex justify-center flex-col relative items-center mx-auto'>
         <div className='flex flex-col items-centers relative justify-center mx-auto'>
-          <div className='mx-auto bg-yellow-400 dark:bg-blue-400 relative sm:w-[370px] sm:h-[333px] overflow-hidden' id='landing-pic-container'>
+          {/* <div className='mx-auto bg-yellow-400 dark:bg-blue-400 relative sm:w-[370px] sm:h-[333px] overflow-hidden' id='landing-pic-container'>
           {!isImageLoaded && (
             <Skeleton circle={true} height={'100%'} width={'100%'} />
           )}
@@ -55,7 +55,7 @@ function LandingPage() {
             <img src={myPicture} className='w-full h-full object-contain' alt="profile" />
           )}
 
-          </div>
+          </div> */}
 
           <div className='mt-3 flex flex-col mx-auto'>
             <h1 className='text-center sm:text-6xl text-4xl font-Truculenta font-extrabold '>Full-Stack Developer<span className='text-4xl animate-wiggle hover:cursor-pointer'>👋</span>
