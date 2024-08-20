@@ -37,7 +37,7 @@ function RecentWorks() {
             ))
           }
         </ul>
-        <div className={`${filteredProjects.length === 0 ? 'flex items-center justify-center':'grid sm:grid-cols-1 md:grid-cols-2 mg:grid-cols-3 mt-2 p-3 gap-x-5 gap-y-5 py-10 max-w-5xl mx-auto'} `}>
+        <div className={`${filteredProjects.length === 0 ? 'flex items-center justify-center':'grid sm:grid-cols-1 md:grid-cols-2 mg:grid-cols-3 mt-2 p-3 gap-x-5 gap-y-5 py-10 max-w-[1200px] mx-auto'} `}>
           {
             filteredProjects.length === 0 ? 
             
