@@ -18,7 +18,7 @@ function Footer() {
         </a>
       </div> */}
 
-      <Technology text = {'Updated: April 17 2024'} class={'sm:p-3  rounded-none  bg-white text-black sm:uppercase p-3'} />
+      <Technology text = {'Updated: April 20 2024'} class={'sm:p-3  rounded-none  bg-white text-black sm:uppercase p-3'} />
     </footer>
   )
 }

@@ -18,6 +18,7 @@ const MotionCard = ({
   siteLink, 
   readLink, 
   pics,
+  onRead,
 }) => {
   return (
     <motion.div
@@ -36,6 +37,7 @@ const MotionCard = ({
         siteLink={siteLink}
         readLink={readLink}
         pics={pics}
+        onRead={onRead}
       />
     </motion.div>
   );
@@ -54,6 +56,7 @@ const TiltCard = ({
   siteLink, 
   readLink, 
   pics,
+  onRead,
 }) => {
   const ref = useRef(null);
 
@@ -128,6 +131,7 @@ const TiltCard = ({
               siteLink={siteLink}
               readLink={readLink}
               pics={pics}
+              onRead={onRead}
             />
         </p>
       </div>

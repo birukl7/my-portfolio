@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-function WorkCard({ pics, title, siteLink, gitLink, description, readLink, firstTech = 'Node js', secondTech = 'Mongo DB', category }) {
+function WorkCard({ pics, title, siteLink, gitLink, description, readLink, firstTech = 'Node js', secondTech = 'Mongo DB', category, noRead=false }) {
 
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const { ref: workRef, inView: myElementIsVisible} = useInView({
@@ -62,7 +62,7 @@ function WorkCard({ pics, title, siteLink, gitLink, description, readLink, first
 
       <div className='flex justify-between gap-x-1 sm:gap-auto items-center px-4 py-3 mt-2'>
         <button className='bg-[#1688e6] p-2 rounded-md  hover:bg-transparent hover:outline hover:outline-1 font-bold w-36 sm:w-auto shadow-xl'>
-          <Link to={readLink ? readLink : "#"} className='mr-2 flex items-center hover: transition-all duration-300 ease-linear text-white hover:dark:text-black rounded-full text-sm'>
+          <Link to={readLink ? readLink : "#"} className={`mr-2 flex items-center hover: transition-all duration-300 ease-linear text-white hover:dark:text-black rounded-full text-sm ${noRead ? 'hidden' : ''}`}>
             Read More<FontAwesomeIcon icon={faArrowRight} className='ml-2' />
           </Link>
         </button>

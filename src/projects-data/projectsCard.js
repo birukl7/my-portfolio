@@ -30,6 +30,12 @@ import myPortfolio6 from '/images/body-images/my-portfolio/my-portfolio6.png'
 import myPortfolio7 from '/images/body-images/my-portfolio/my-portfolio7.png'
 
 
+import inlineBot1 from '/images/body-images/inline-bot/inline-bot-1.jpg'
+import inlineBot2 from '/images/body-images/inline-bot/inline-bot-2.png'
+import inlineBot3 from '/images/body-images/inline-bot/inline-bot-3.png'
+import inlineBot4 from '/images/body-images/inline-bot/inline-bot-4.png'
+
+
 
 const projects = [
   {
@@ -65,6 +71,31 @@ const projects = [
     catagory: ['Frontend','Database', 'Backend','UI/UX']
   },
   {
+    id: 4,
+    pics: [inlineBot1, inlineBot2, inlineBot3, inlineBot4],
+    name: 'Inline Dictionary Bot',
+    firstTech: 'Python',
+    secondTech: 'Python-telegram-bot',
+    tags: ["Python", "Telegram Bot"],
+    descriptions: ["Search for meanings inline or interact directly with the bot in chat."],
+    siteLink: 'https://t.me/InWordyBot',
+    githubLink: 'https://github.com/Inline_Dictionary_Bot',
+    // readLink: '/works/5',
+    catagory: ['Bots'],
+  }
+  ,{
+    id:5,
+    pics: [myPortfolio3, myPortfolio1, myPortfolio2, myPortfolio4, myPortfolio5, myPortfolio6, myPortfolio7],
+    name: 'My Portfolio',
+    firstTech: 'React Js',
+    secondTech: 'Tailwind ',
+    tags: ["Portfolio","React Js", "Node js", "Files", "Json" ],
+    descriptions: ['My portfolio showcases projects ranging from dynamic user interfaces to robust backend systems.'],
+    siteLink: 'https://biruklemma.com',
+    githubLink: 'https://github.com/birukl7',
+    readLink: '/works/5',
+    catagory: ['Frontend', 'UI/UX'],
+  } ,{
     id: 3,
     pics: [spaceInvaders,spaceInvaders1,spaceInvaders2,spaceInvaders3,spaceInvaders4,spaceInvaders5],
     name: 'Space Invaders',
@@ -76,19 +107,7 @@ const projects = [
     githubLink: 'https://github.com/birukl7/health-guard',
     readLink: '/works/3',
     catagory: ['Frontend']
-  },{
-    id:4,
-    pics: [myPortfolio3, myPortfolio1, myPortfolio2, myPortfolio4, myPortfolio5, myPortfolio6, myPortfolio7],
-    name: 'My Portfolio',
-    firstTech: 'React Js',
-    secondTech: 'Tailwind ',
-    tags: ["Portfolio","React Js", "Node js", "Files", "Json" ],
-    descriptions: ['My portfolio showcases projects ranging from dynamic user interfaces to robust backend systems.'],
-    siteLink: 'https://biruklemma.com',
-    githubLink: 'https://github.com/birukl7',
-    readLink: '/works/4',
-    catagory: ['Frontend', 'UI/UX'],
-  }
+  },
   ]
 
 export default projects

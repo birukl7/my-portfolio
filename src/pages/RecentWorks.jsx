@@ -9,7 +9,7 @@ import MotionCard from '../components/MotionCard';
 function RecentWorks() {
   const [filteredProjects, setFilteredProjects] = useState(projects);
   const [selectedFilter, setSelectedFilter] = useState("Everything");
-  const filters = ["Everything", 'UI/UX', 'Frontend', 'Backend', 'Database'];
+  const filters = ["Everything", 'UI/UX', 'Frontend', 'Backend', 'Database', 'Bots'];
 
   const handleOnClick = (buttonValue) => {
     if (buttonValue === 'Everything') {
@@ -58,6 +58,7 @@ function RecentWorks() {
                   readLink={project.readLink}
                   pics={project.pics}
                   key={project.id}
+                  onRead={index === 5 ? true: false}
                 />
               ))
           }
