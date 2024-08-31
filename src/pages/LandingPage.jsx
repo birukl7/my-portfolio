@@ -16,7 +16,7 @@ function LandingPage() {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const handleDownload = () => {
-    const documentUrl = '/documents/Biruk Lemma\'s Resume.pdf';
+    const documentUrl = '/documents/Biruk Lemma Resume.pdf';
     const link = document.createElement('a');
     link.href = documentUrl;
     link.setAttribute('download', 'Biruk Lemma Resume');
