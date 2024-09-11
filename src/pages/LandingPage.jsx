@@ -72,13 +72,13 @@ function LandingPage() {
           <div className='mt-3 flex flex-col mx-auto'>
             <h1 className='text-center sm:text-6xl text-4xl font-Truculenta font-extrabold '>Full-Stack Developer<span className='text-4xl animate-wiggle hover:cursor-pointer'>👋</span>
             </h1>
-            <div className='flex items-start justify-center '>
+            <article className='flex items-start justify-center '>
               <p className=' my-4 md:text-xl font-Truculenta sm:w-[350px] align-middle  w-[210px]' style={{textAlign: 'center'}}>
-              <span className='block text-[14px]'>#Page visit: {visitCount}</span>
+              <strong className='block text-[14px] font-normal'>#Page visit: {visitCount}</strong>
               <hr className='pb-1' /> Hi, I'm Biruk Lemma. A Full-Stack Developer based in Ethiopia, Addis Ababa 📍.</p>
               <ul className='my-4 text-xl font-Truculenta dynamic-texts hidden'>
               </ul>
-            </div>
+            </article>
  
           </div>
           <ul className='flex justify-evenly sm:justify-around sm:my-5 my-4'>
