@@ -2,10 +2,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' //free Font Awe
 import  { useEffect, useState } from 'react'
 import myPicture from '/images/body-images/my-picture.svg' // The picture in the landing page
 import { faGithub, faLinkedinIn, faTelegram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { useCount } from '../components/PageCountContext';
-import { faDownload, faEnvelope, faMailForward } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import PrimaryButton from '../components/PrimaryButton';
 
 
@@ -25,7 +24,6 @@ function LandingPage() {
     document.body.removeChild(link);
   };
 
-  // const [text, setText]= useState('')
   useEffect(()=>{
     const handleResize= ()=>{
       setScreenH(window.innerHeight)
@@ -92,8 +90,6 @@ function LandingPage() {
 
           <PrimaryButton text={"Resume"} onclick={handleDownload} icon={<FontAwesomeIcon icon={faDownload} className='text-[16px]' />}/>
             
-          
-
           
         </div>
         {screenH >= 760 ? (

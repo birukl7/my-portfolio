@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
@@ -8,9 +8,12 @@ import Project from './pages/Project.jsx'
 import { ThemeProvider } from './components/ThemeContext.jsx'
 import { SkeletonTheme } from 'react-loading-skeleton'
 import { CountProvider } from './components/PageCountContext.jsx'
-import MotionCard from './components/MotionCard.jsx'
-import Big from './components/Big.jsx'
-import BorderAnimation from './components/BorderAnimation.jsx'
+import Resume from './pages/Resume.jsx'
+
+function ResumeRedirect(){
+  window.location.href = '/documents/Biruk Lemma Resume.pdf'
+  return null;
+}
 
 const router = createBrowserRouter([
   {
@@ -21,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: '/works/:id',
     element: <Project />
+  },
+  {
+    path: '/resume',
+    element: <ResumeRedirect />
   }
   
 ]);
@@ -38,4 +45,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   
 )
 
-// reportWebVitals();
