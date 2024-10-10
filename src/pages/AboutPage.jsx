@@ -9,8 +9,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Blurhash } from 'react-blurhash';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import LanguageLinks from '../components/LanguageLinks';
+import { faGithub, faLinkedinIn, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 function AboutPage() {
   const [progressVisible, setProgressVisible] = useState(false);
@@ -68,15 +70,28 @@ function AboutPage() {
         <div className='sm:flex gap-x-4 bg-inherit bg-white p-5 rounded-2xl sm:w-11/12 shadow-xl'>
           <div className='sm:w-1/2 pt-8 pl-3'>
             
-            <p className=' pl-1 font-RobotoCondensed dark:font-semibold '>
+            <p className=' pl-1 font-RobotoCondensed  sm:text-[15px] text-[14px] dark:text-black '>
             My interest in technology and innovation began when I joined college, where I quickly found my ability in programming and software development. These days, my main focus is on developing web-based products and impactful projects. I'm a fast learner, and whenever I'm not working on a project, I'm always learning something new.
             </p>
+
+            <ul className='flex justify-evenly sm:justify-start gap-x-5 sm:my-5 my-4'>
+            <LanguageLinks className={' text-[18px] sm:text-[18px] md:text-[18px]'} link={'https://github.com/birukl7'} icon={faGithub}  />
+
+            <LanguageLinks  className={' text-[18px] sm:text-[18px] md:text-[18px]'}  link={'https://linkedin.com/in/biruk-lemma'} icon={faLinkedinIn} />
+
+            <LanguageLinks className={' text-[18px] sm:text-[18px] md:text-[18px]'} link={'https://twitter.com/biruk_777?t=ncFmziryKXbgwMzOcFuRxw&s=09'} icon={faTwitter} />
+
+            <LanguageLinks className={' text-[18px] sm:text-[18px] md:text-[18px]'} link={'mailto:biruklemmadebela@gmail.com'} icon={faEnvelope} />
+
+
+            <a href="https://t.me/birukl_777" target='_blank'><FontAwesomeIcon className=' text-[18px] sm:text-[18px] md:text-[18px] md:text-3xl sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faTelegram}/></a>
+          </ul>
 
             <PrimaryButton text={'Download Resume'} class={'mt-6 -ml-2 text-white'} icon={<FontAwesomeIcon icon={faDownload} />} onclick={handleDownload} />
           </div>
 
-          {/* <div className='p-3 pt-8 flex-1 sm:w-1/2'>
-            {progressVisible && (
+          <div className='p-3 pt-8 flex-1 sm:w-1/2'>
+            {/* {progressVisible && (
               <>
                 <Progress
                   name={'API Develpment'}
@@ -101,8 +116,11 @@ function AboutPage() {
                   bgColor={'bg-slate-200'}
                 />
               </>
-            )}
-          </div> */}
+            )} */}
+
+
+
+          </div>
 
         </div>
       </div>

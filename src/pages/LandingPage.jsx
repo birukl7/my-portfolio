@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' //free Font Awesome Icons for the social media icons
 import  { useEffect, useState } from 'react'
 import myPicture from '/images/body-images/my-picture.svg' // The picture in the landing page
-import { faGithub, faLinkedinIn, faTelegram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faDocker, faJava, faJs, faLaravel, faLinkedinIn, faPhp, faPython, faReact, faTelegram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import 'react-loading-skeleton/dist/skeleton.css';
 import { useCount } from '../components/PageCountContext';
 import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import PrimaryButton from '../components/PrimaryButton';
+import LanguageLinks from '../components/LanguageLinks';
 
 
 function LandingPage() {
@@ -68,27 +69,56 @@ function LandingPage() {
           </div> */}
 
           <div className='mt-3 flex flex-col mx-auto'>
-            <h1 className='text-center sm:text-6xl text-4xl font-Truculenta font-extrabold '>Full-Stack Developer<span className='text-4xl animate-wiggle hover:cursor-pointer'>👋</span>
+            <h1 className='text-center sm:text-[150px] text-4xl font-Truculenta font-extrabold '><span className='text-4xl animate-wiggle hover:cursor-pointer'>👋</span>
             </h1>
             <article className='flex items-start justify-center '>
-              <p className=' my-4 md:text-xl font-Truculenta sm:w-[350px] align-middle  w-[210px]' style={{textAlign: 'center'}}>
+              <p className=' my-4 md:text-3xl font-Truculenta sm:w-[350px] align-middle  w-[210px] dark:text-black text-[18px]' style={{textAlign: 'center'}}>
               <strong className='block text-[14px] font-normal'>#Page visit: {visitCount}</strong>
-              <hr className='pb-1' /> Hi, I'm Biruk Lemma. A Full-Stack Developer based in Ethiopia, Addis Ababa 📍.</p>
+              <hr className='pb-1 dark:bg-black dark:pb-[1px]'  /> Hi, I'm Biruk Lemma. A Junior Full-Stack Developer. </p>
               <ul className='my-4 text-xl font-Truculenta dynamic-texts hidden'>
               </ul>
             </article>
  
           </div>
-          <ul className='flex justify-evenly sm:justify-around sm:my-5 my-4'>
-            <a href="https://github.com/birukl7" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faGithub}/></a>
-            <a href="https://linkedin.com/in/biruk-lemma" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faLinkedinIn}/></a>
-            <a href="https://twitter.com/biruk_777?t=ncFmziryKXbgwMzOcFuRxw&s=09" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faTwitter}/></a>
-            <a href="mailto:biruklemmadebela@gmail.com" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faEnvelope}/></a>
+          {/* <ul className='flex justify-evenly sm:justify-around sm:my-5 my-4'>
+            <LanguageLinks link={'https://github.com/birukl7'} icon={faGithub} />
+
+            <LanguageLinks link={'https://linkedin.com/in/biruk-lemma'} icon={faLinkedinIn} />
+
+            <LanguageLinks link={'https://twitter.com/biruk_777?t=ncFmziryKXbgwMzOcFuRxw&s=09'} icon={faTwitter} />
+
+            <LanguageLinks link={'mailto:biruklemmadebela@gmail.com'} icon={faEnvelope} />
+
+
             <a href="https://t.me/birukl_777" target='_blank'><FontAwesomeIcon className='md:text-3xl text-2xl  sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faTelegram}/></a>
-          </ul>
+          </ul> */}
          
+          <ul className='flex justify-evenly sm:justify-around sm:my-5 my-4'>
+
+          <div className='flex items-center gap-x-3 border-r-2 dark:border-black pr-4 py-2'>
+            <LanguageLinks link={'https://github.com/birukl7?tab=repositories&language=php'} icon={faPhp} />
+
+            <LanguageLinks link={'https://github.com/birukl7?tab=repositories&language=javascript'} icon={faJs} />
+          </div>
+
+          <div className='flex items-center justify-between gap-x-3 border-r-2 dark:border-black pr-4 sm:py-2 pl-3 sm:pl-0'>
+            <LanguageLinks link={'https://github.com/birukl7?tab=repositories&language=blade'} icon={faLaravel} />
+
+            <LanguageLinks link={'https://github.com/birukl7?tab=repositories&language=javascript'} icon={faReact} />
+          </div>
+
+          <div className=' items-center gap-x-3 px-2 py-2'>
+            <LanguageLinks link={'https://github.com/birukl7?tab=repositories&language=docker'} icon={faDocker} />
+            <LanguageLinks icon={''}/>
+          </div>
+
+
+          </ul>
 
           <PrimaryButton text={"Resume"} onclick={handleDownload} icon={<FontAwesomeIcon icon={faDownload} className='text-[16px]' />}/>
+
+          
+
             
           
         </div>

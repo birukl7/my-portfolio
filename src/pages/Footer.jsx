@@ -2,6 +2,7 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import Technology from '../components/Technology'
+import LanguageLinks from '../components/LanguageLinks'
 
 function Footer() {
   return (
@@ -19,6 +20,10 @@ function Footer() {
       </div> */}
 
       <Technology text = {'Updated: April 20 2024'} class={'sm:p-3  rounded-none  bg-white text-black sm:uppercase p-3'} />
+
+      <ul>
+        {/* <LanguageLinks  /> */}
+      </ul>
     </footer>
   )
 }
