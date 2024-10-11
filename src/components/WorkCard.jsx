@@ -56,16 +56,16 @@ function WorkCard({ pics, title, siteLink, gitLink, description, readLink, first
       </div>
 
       {/* Clamped text paragraph */}
-      <p className='sm:py-1 px-4 line-clamp-4 sm:text-[15px] text-[13px]'>
+      <p className='sm:py-1 px-4  sm:text-[15px] text-[13px]'>
         {description ?  description : 'Link Building is a method SEO professionals use to generate backlinks that compel search engines to rank thier websited higher on search results LinkBuilders makes it easier for ...'}
       </p>
 
       <div className='flex justify-between gap-x-1 sm:gap-auto items-center px-4 py-3 mt-2'>
-        <button className='bg-[#1688e6] p-2 rounded-md  hover:bg-transparent hover:outline hover:outline-1 font-bold w-36 sm:w-auto shadow-xl'>
+        {/* <button className='bg-[#1688e6] p-2 rounded-md  hover:bg-transparent hover:outline hover:outline-1 font-bold w-36 sm:w-auto shadow-xl'>
           <Link to={readLink ? readLink : "#"} className={`mr-2 flex items-center hover: transition-all duration-300 ease-linear text-white hover:dark:text-black rounded-full text-sm ${noRead ? 'hidden' : ''}`}>
             Read More<FontAwesomeIcon icon={faArrowRight} className='ml-2' />
           </Link>
-        </button>
+        </button> */}
  
       </div>
 

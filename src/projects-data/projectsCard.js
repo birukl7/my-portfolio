@@ -46,8 +46,7 @@ const projects = [
     secondTech: 'Blade',
     tags: ["mental health", "college students", "health consultations"],
     descriptions: [
-      'Health Guard is a mental health platform designed to support college students dealing with mental health challenges. Built with Laravel and Blade templating, this solution provides a range of resources and services tailored to students\' needs. It offers live chats and consultations with health professionals, giving students easy access to expert advice and support. The platform also includes interactive quizzes to help users assess their mental well-being.',
-      ' The project, which earned 4th place in a university hackathon, highlights the importance of making mental health resources accessible in academic settings. By incorporating these features into an easy-to-use interface, Health Guard helps students manage their mental health and fosters a supportive environment within the college community.'],
+      'Health Guard is a mental health platform designed to support college students dealing with mental health challenges.'],
     githubLink: 'https://github.com/birukl7/health-guard',
     siteLink: 'https://healthguard.biruklemma.com',
     readLink: '/works/1',
@@ -58,12 +57,11 @@ const projects = [
     id: 2,
     pics: [mallin1,mallin2,mallin3,mallin4,mallin5,mallin6,],
     name: 'Mall in',
-    firstTech: 'React Js',
-    secondTech: 'Laravel',
+    firstTech: 'Laravel',
+    secondTech: '#Unfinished',
     tags: ["Locations", "Vacancy", "Entertainment", "Inertia Js"],
     descriptions: [
-      'Mall in Addis Ababa is a front-end application developed using React, aimed at helping users find and rent available spaces in malls across Addis Ababa. The platform provides information on rental opportunities within local malls, including details about space availability. The current version includes a user-friendly interface that allows users to search for and view information about available rental spaces.', 
-    'While the project is still in development and only the front-end is complete, it features interactive maps and a responsive design to enhance the user experience. Mall In showcases advanced front-end development skills with React, and aims to offer a digital platform for users to explore and secure rental spaces in malls. This project represents a step towards creating a valuable tool for both users seeking rental spaces and mall businesses looking to present available spaces online.'
+      'Mall in Addis Ababa is a front-end application developed using React, aimed at helping users find and rent available spaces in malls across Addis Ababa.'
     ],
     githubLink: 'https://github.com/birukl7/mall-in',
     siteLink: 'https://addismall.biruklemma.com',
