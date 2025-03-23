@@ -84,7 +84,7 @@ function AboutPage() {
             <LanguageLinks className={' text-[18px] sm:text-[18px] md:text-[18px]'} link={'mailto:biruklemmadebela@gmail.com'} icon={faEnvelope} />
 
 
-            <a href="https://t.me/birukl_777" target='_blank'><FontAwesomeIcon className=' text-[18px] sm:text-[18px] md:text-[18px] md:text-3xl sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer' icon={faTelegram}/></a>
+            <a href="https://t.me/birukl_777" target='_blank'><FontAwesomeIcon className=' text-[18px] sm:text-[18px] md:text-[18px] md:text-3xl sm:text-3xl hover:text-yellow-300 dark:hover:text-blue-700 transition-all duration-200 ease-linear cursor-pointer resume-button' icon={faTelegram}/></a>
           </ul>
 
             <PrimaryButton text={'Download Resume'} class={'mt-6 -ml-2 text-white'} icon={<FontAwesomeIcon icon={faDownload} />} onclick={handleDownload} />
@@ -117,9 +117,6 @@ function AboutPage() {
                 />
               </>
             )} */}
-
-
-
           </div>
 
         </div>

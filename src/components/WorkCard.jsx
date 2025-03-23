@@ -50,7 +50,7 @@ function WorkCard({ pics, title, siteLink, gitLink, description, readLink, first
       <div className='flex justify-between py-4 px-4'>
         <h4 className='md:text-3xl text-2xl font-semibold font-Truculenta text'>{title}</h4>
         <div className='flex items-center gap-x-4'>
-          <a target='_blank' href={siteLink ? siteLink : '#'} className='underline hover:text-blue-400 text-xs md:text-sm'>Visit Site</a>
+          <a target='_blank' href={siteLink ? siteLink : '#'} className='underline hover:text-blue-400 text-xs md:text-sm visit-link'>Visit Site</a>
           <a href={gitLink ? gitLink : "#"} className='text-2xl' target='_blank'><FontAwesomeIcon icon={faGithub} className='hover:text-yellow-300 dark:hover:text-blue-400 transition-all duration-150 ease-in-out' /></a>
         </div>
       </div>

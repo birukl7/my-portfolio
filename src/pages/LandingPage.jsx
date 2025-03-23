@@ -69,12 +69,12 @@ function LandingPage() {
           </div> */}
 
           <div className='mt-3 flex flex-col mx-auto'>
-            <h1 className='text-center sm:text-[150px] text-4xl font-Truculenta font-extrabold '><span className='text-4xl animate-wiggle hover:cursor-pointer'>👋</span>
-            </h1>
+            <span className='text-center sm:text-[150px] text-4xl font-Truculenta font-extrabold '><span className='text-4xl animate-wiggle hover:cursor-pointer'>👋</span>
+            </span>
             <article className='flex items-start justify-center '>
               <p className=' my-4 md:text-3xl font-Truculenta sm:w-[350px] align-middle  w-[210px] dark:text-black text-[18px]' style={{textAlign: 'center'}}>
               <strong className='block text-[14px] font-normal'>#Page visit: {visitCount}</strong>
-              <hr className='pb-1 dark:bg-black dark:pb-[1px]'  /> Hi, I'm Biruk Lemma. A Junior Full-Stack Developer. </p>
+              <hr className='pb-1 dark:bg-black dark:pb-[1px]'  /><h1>Hi, I'm Biruk Lemma. A Junior Full-Stack Developer.</h1>  </p>
               <ul className='my-4 text-xl font-Truculenta dynamic-texts hidden'>
               </ul>
             </article>
@@ -115,11 +115,7 @@ function LandingPage() {
 
           </ul>
 
-          <PrimaryButton text={"Resume"} onclick={handleDownload} icon={<FontAwesomeIcon icon={faDownload} className='text-[16px]' />}/>
-
-          
-
-            
+          <PrimaryButton text={"Resume"} onclick={handleDownload} icon={<FontAwesomeIcon icon={faDownload} className='text-[16px] resume-button' />}/>
           
         </div>
         {screenH >= 760 ? (
