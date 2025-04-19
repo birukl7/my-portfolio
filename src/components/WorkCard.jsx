@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Technology from './Technology';
-import { Link } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
@@ -41,7 +39,7 @@ function WorkCard({ pics, title, siteLink, gitLink, description, readLink, first
       {/* <div className='h-60 w-full bg-no-repeat bg-center bg-140% hover:bg-150% transition-all duration-300 ease-in-out border-b-[1px] mb-6 border-black rounded-[10px]' style={{backgroundImage: `url(${pics[0]})`}}>
     </div> */}
 
-    <div className='flex justify-start ml-4 gap-x-2 mt-3'>
+    <div className='flex justify-start ml-4 gap-x-2 mt-3 font-Outfit'>
       <Technology text={firstTech} class={'bg-slate-50 text-black  sm:uppercase text-xs py-1 px-3 shadow-sm shadow-yellow-200  capitalize'} />
       <Technology text={secondTech} class={'bg-slate-50 shadow-sm shadow-yellow-200 text-black py-1 px-3 sm:uppercase text-xs capitalize'} />
     </div>
@@ -56,7 +54,7 @@ function WorkCard({ pics, title, siteLink, gitLink, description, readLink, first
       </div>
 
       {/* Clamped text paragraph */}
-      <p className='sm:py-1 px-4  sm:text-[15px] text-[13px]'>
+      <p className='sm:py-1 px-4 font-Outfit  sm:text-[16px] text-[13px]'>
         {description ?  description : 'Link Building is a method SEO professionals use to generate backlinks that compel search engines to rank thier websited higher on search results LinkBuilders makes it easier for ...'}
       </p>
 

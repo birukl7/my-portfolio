@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import SecondaryBtn from '../components/SecondaryBtn';
-import WorkCard from '../components/WorkCard';
 import SectionTitle from '../components/SectionTitle';
 import projects from '../projects-data/projectsCard';
 import sorryImage from '/images/body-images/sorry.png'
@@ -25,7 +24,7 @@ function RecentWorks() {
     <section id='works'>
       <SectionTitle text={'Recent Work'} />
       <div>
-        <ul className='flex justify-start gap-x-5 gap-y-3 flex-wrap'>
+        <ul className='flex font-Outfit justify-start gap-x-5 gap-y-3 flex-wrap'>
           {
             filters.map((buttonValue, index) => (
               <SecondaryBtn

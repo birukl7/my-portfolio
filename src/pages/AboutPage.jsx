@@ -6,7 +6,6 @@ import Numbers from '../components/Numbers';
 import myPicture from '/images/body-images/my-picture.svg';
 import SectionTitle from '../components/SectionTitle';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { Blurhash } from 'react-blurhash';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -70,7 +69,7 @@ function AboutPage() {
         <div className='sm:flex gap-x-4 bg-inherit bg-white p-5 rounded-2xl sm:w-11/12 shadow-xl'>
           <div className='sm:w-1/2 pt-8 pl-3'>
             
-            <p className=' pl-1 font-RobotoCondensed  sm:text-[15px] text-[14px] dark:text-black '>
+            <p className=' pl-1 font-Outfit  sm:text-[18px] text-[14px] dark:text-black '>
             My interest in technology and innovation began when I joined college, where I quickly found my ability in programming and software development. These days, my main focus is on developing web-based products and impactful projects. I'm a fast learner, and whenever I'm not working on a project, I'm always learning something new.
             </p>
 

@@ -32,7 +32,8 @@ export default {
         Truculenta:['"Truculenta"', ],
         Inter : ['"Inter"',],
         RobotoCondensed : ['"Roboto Condensed"'],
-        RocknRollOne : ['"RocknRoll One"']
+        RocknRollOne : ['"RocknRoll One"'],
+        Outfit : ['"Outfit"'],
       },
       inset:{
         'custom-right': '840px'
