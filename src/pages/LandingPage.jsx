@@ -74,7 +74,7 @@ function LandingPage() {
             <article className='flex items-start justify-center '>
               <p className=' my-4 md:text-3xl font-Truculenta sm:w-[350px] align-middle  w-[210px] dark:text-black text-[18px]' style={{textAlign: 'center'}}>
               <strong className='block text-[14px] font-normal'>#Page visit: {visitCount}</strong>
-              <hr className='pb-1 dark:bg-black dark:pb-[1px]'  /><h1>Hi, I'm Biruk Lemma. A Junior Full-Stack Developer.</h1>  </p>
+              <hr className='pb-1 dark:bg-black dark:pb-[1px]'  /><h1>Hi, I'm Biruk Lemma. A Full-Stack Developer.</h1>  </p>
               <ul className='my-4 text-xl font-Truculenta dynamic-texts hidden'>
               </ul>
             </article>
